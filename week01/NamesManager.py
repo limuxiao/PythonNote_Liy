@@ -68,7 +68,18 @@ def name_delete():
         删除一个名片
     :return:
     """
-    pass
+    name = input('请输入要删除的名片的名字：')
+    name_dels = []
+    for n in names:
+        if n['name'] == name:
+            name_dels .append(n)
+
+    if len(name_dels) <= 0:
+        print('未找到您要删除的名片')
+        return
+    for n in name_dels:
+        names.remove(n)
+    name_query_all()
 
 
 def name_query():
@@ -97,8 +108,18 @@ def name_query_all():
     """
     print('姓名\t年龄\t性别')
     for name in names:
-        print('%s\t%s\t%s' % (name['name'], name['age'], name['gender']))
+        print('%s'%name['name'], end='\t')
+        print('%s' % name['age'], end='\t')
+        print('%s' % name['gender'])
         pass
+
+
+def has_name(name):
+    for n in names:
+        if n['name'] == name:
+            return True
+    else:
+        return False
 
 
 def main():
