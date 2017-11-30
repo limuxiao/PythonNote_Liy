@@ -21,4 +21,4 @@ class SweetPatato:
         self.comps.append(comp)
 
     def __str__(self):
-        return '烤了%d分钟，现在是%s'%(self.cooked_level,self.cooked_string) + ',加了:' + str(self.comps)
+        return '烤了%d分钟，现在是%s' % (self.cooked_level, self.cooked_string) + ',加了:' + str(self.comps)
