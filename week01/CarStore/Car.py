@@ -15,8 +15,15 @@ class Car(object):
     def music(self):
         print('-----%s musicing-----[%s]' % (self.car_name, self.car_type))
 
+    def get_name(self):
+        return self.car_name
+
+    def get_type(self):
+        return self.car_type
+
 class XianDai(Car):
-    pass
+    def __init__(self):
+        super().__init__('四驱', '现代')
 
 class MingTu(XianDai):
     pass
