@@ -5,6 +5,7 @@ from week01.SwweetPotato import SweetPatato as SP
 # from week01.Home import Bed as Bed
 import week01.Home
 from week01.Dog import Dog as Dog
+import sys
 
 def testClass01():
     c = Cat(age=20, name='Tom')
@@ -55,6 +56,13 @@ def testClass04():
     dog.set_age(-10)
     print(dog.get_age())
     dog.sleep(12)
+    dog2 = dog
+    # sys.getrefcount(dog)      测量一个对象的引用计数
+    print(sys.getrefcount(dog))
+    del dog
+    print(sys.getrefcount(dog2))
+    del dog2
+    print('=' * 10)
     pass
 
 

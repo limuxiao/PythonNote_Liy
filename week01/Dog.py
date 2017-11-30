@@ -5,6 +5,9 @@ class Dog:
         if 0 <= age <= 100:
             self.__age = age
 
+    def __del__(self):
+        print('-----%s over-----' % self.name)
+
     def __sleep(self):
         """
             私有方法
