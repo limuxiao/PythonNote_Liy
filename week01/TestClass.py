@@ -1,6 +1,8 @@
 # -*- coding:utf-8 -*-
 from week01.Cat import Cat
 from week01.SwweetPotato import SweetPatato as SP
+from week01.Home import Home as Home
+from week01.Home import Bed as Bed
 
 
 def testClass01():
@@ -35,9 +37,20 @@ def testClass02():
     pass
 
 
+def testClass03():
+    home = Home('我的家', 130, '北京市朝阳区望京西街112号')
+    print(home)
+    bed = Bed('席梦思', 4)
+    print(bed)
+    home.addFurniture(bed)
+    print(home)
+    pass
+
+
 def main():
     # testClass01()
-    testClass02()
+    # testClass02()
+    testClass03()
     pass
 
 
