@@ -6,6 +6,8 @@ def testClass01():
     c = Cat()
     c.test()
     c.sleep()
+    c.name = 'Tom'
+    c.printName()
     pass
 
 

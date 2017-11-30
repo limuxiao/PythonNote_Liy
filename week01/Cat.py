@@ -1,5 +1,8 @@
 # -*- coding:utf-8 -*-
 class Cat:
+
+
+
     def test(self):
         print('test...')
 
@@ -9,6 +12,9 @@ class Cat:
     def sleep(self):
         print('sleep.....')
 
+
+    def printName(self):
+        print(self.name)
 
 def main():
     pass
