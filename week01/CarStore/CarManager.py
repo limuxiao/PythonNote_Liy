@@ -13,6 +13,7 @@ class CarManager(object):
 
         car_dict = {car.get_name(): car, 'num': num}
         self.cars.append(car_dict)
+        print('-----新进：%s,库存：%s----' % (car.get_name(), num))
 
     def del_car(self, car, num):
         pass

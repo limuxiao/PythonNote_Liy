@@ -26,7 +26,8 @@ class XianDai(Car):
         super().__init__('四驱', '现代')
 
 class MingTu(XianDai):
-    pass
+    def __init__(self):
+        pass
 
 class Linken(Car):
     pass
