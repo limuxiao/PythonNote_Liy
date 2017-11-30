@@ -1,9 +1,10 @@
 # -*- coding:utf-8 -*-
 from week01.Cat import Cat
 from week01.SwweetPotato import SweetPatato as SP
-from week01.Home import Home as Home
-from week01.Home import Bed as Bed
-
+# from week01.Home import Home as Home
+# from week01.Home import Bed as Bed
+import week01.Home
+from week01.Dog import Dog as Dog
 
 def testClass01():
     c = Cat(age=20, name='Tom')
@@ -38,19 +39,30 @@ def testClass02():
 
 
 def testClass03():
-    home = Home('我的家', 130, '北京市朝阳区望京西街112号')
+    home = week01.Home.Home('我的家', 130, '北京市朝阳区望京西街112号')
     print(home)
-    bed = Bed('席梦思', 4)
+    bed = week01.Home.Bed('席梦思', 4)
     print(bed)
     home.addFurniture(bed)
     print(home)
     pass
 
 
+def testClass04():
+    dog = Dog('dahuang', 20)
+    # print(dog.__age)
+    print(dog.get_age())
+    dog.set_age(-10)
+    print(dog.get_age())
+    dog.sleep(12)
+    pass
+
+
 def main():
     # testClass01()
     # testClass02()
-    testClass03()
+    # testClass03()
+    testClass04()
     pass
 
 

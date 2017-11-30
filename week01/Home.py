@@ -17,8 +17,8 @@ class Home:
         return msg
 
     def addFurniture(self, item):
-        self.contain_items.append(item.name)
-        self.left_area = self.area - item.area
+        self.contain_items.append(item.get_name())
+        self.left_area = self.area - item.get_area()
 
 
 class Bed:
@@ -28,6 +28,12 @@ class Bed:
 
     def __str__(self):
         return '我有一个%s，他占用的面积是：%s' % (self.name, self.area)
+
+    def set_name(self, name):
+        self.name = name
+
+    def set_area(self, area):
+        self.area = area
 
     def get_name(self):
         return self.name
