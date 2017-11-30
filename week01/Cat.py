@@ -28,6 +28,12 @@ class Cat:
     def getAge(self):
         return self.age
 
+    def compare(self, cat):
+        if self.age >= cat.age:
+            return True
+        else:
+            return False
+
     def __str__(self):
         return 'Name:%s,Age:%s'% (self.name, self.age)
 

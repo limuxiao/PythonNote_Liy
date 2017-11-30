@@ -1,5 +1,6 @@
 # -*- coding:utf-8 -*-
 from week01.Cat import Cat
+from week01.SwweetPotato import SweetPatato as SP
 
 
 def testClass01():
@@ -16,11 +17,27 @@ def testClass01():
 
     a = Cat(name='LanMao', age=15)
     print(a)
+    print(a.compare(c))
+    print(c.compare(a))
+    pass
+
+
+def testClass02():
+    sp = SP()
+    print(sp)
+    sp.cook(1)
+    print(sp)
+    sp.addComp('盐')
+    print(sp)
+    sp.cook(4)
+    sp.addComp('辣椒')
+    print(sp)
     pass
 
 
 def main():
-    testClass01()
+    # testClass01()
+    testClass02()
     pass
 
 
