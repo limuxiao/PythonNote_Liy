@@ -3,3 +3,4 @@
 .idea/inspectionProfiles/Project_Default.xml
 week01/__pycache__/__init__.cpython-36.pyc
 *.pyc
+.idea/workspace.xml

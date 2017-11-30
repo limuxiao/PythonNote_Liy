@@ -11,10 +11,7 @@ def testClass01():
     c = Cat(age=20, name='Tom')
     c.test()
     c.sleep()
-<<<<<<< HEAD
-    c.name = 'Tom'
-    c.printName()
-=======
+
     print(c.getName())
     print(c.getAge())
     c.setName('Hehe')
@@ -73,7 +70,6 @@ def testClass04():
 def testClass05():
     c = Cat()
     print(c)
->>>>>>> f1fbd30ec43428464f9aa0c188185343f876cf14
     pass
 
 
