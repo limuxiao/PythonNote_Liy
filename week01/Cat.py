@@ -1,4 +1,5 @@
 # -*- coding:utf-8 -*-
+
 class Cat:
 
     def __init__(self, name='Haha', age=12):
@@ -9,9 +10,6 @@ class Cat:
 
     def test(self):
         print('test...')
-
-    def eat(self):
-        print('eatint.....')
 
     def sleep(self):
         print('sleep.....')

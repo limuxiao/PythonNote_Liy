@@ -66,11 +66,18 @@ def testClass04():
     pass
 
 
+def testClass05():
+    c = Cat()
+    print(c)
+    pass
+
+
 def main():
     # testClass01()
     # testClass02()
     # testClass03()
-    testClass04()
+    # testClass04()
+    testClass05()
     pass
 
 
