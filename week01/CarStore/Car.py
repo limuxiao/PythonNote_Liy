@@ -4,7 +4,9 @@ class Car(object):
         self.__car_type = car_type
         self.__car_name = car_name
         self.__car_price = car_price
-        pass
+
+    def __str__(self):
+        return '%s - %s - %s' % (self.__car_name, self.__car_type, self.__car_price)
 
     def move(self):
         print('-----%s moving-----[%s]' % (self.__car_name, self.__car_type))
@@ -32,13 +34,3 @@ class Car(object):
 
     def get_price(self):
         return self.__car_price
-
-
-class MingTu(Car):
-    def __init__(self):
-        super().__init__('四驱', '名图', 80000)
-
-
-class Mkz(Car):
-    def __init__(self):
-        super().__init__('SUV', 'MKZ', 280000)

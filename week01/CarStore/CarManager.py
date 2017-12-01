@@ -3,6 +3,14 @@ class CarManager(object):
     """
         车库管理类
     """
+    __instance = None
+
+    def __new__(cls, *args, **kwargs):
+        """单例"""
+        if cls.__instance is None:
+            cls.__instance = object.__new__(cls)
+        return cls.__instance
+
     def __init__(self):
         self.cars = []
 
@@ -19,17 +27,33 @@ class CarManager(object):
         print('-----新进：%s,库存：%s----' % (car.get_name(), num))
 
     def del_car(self, car):
+        """
+            删除一批汽车
+        :param car:
+        :return:
+        """
         for car_dict in self.cars:
             if car_dict['name'] == car.get_name():
                 self.cars.remove(car_dict)
         pass
 
     def update_car(self, car, num):
+        """
+            更新库存
+        :param car:
+        :param num:
+        :return:
+        """
         for car_dict in self.cars:
             if car_dict['name'] == car.get_name():
                 car_dict['num'] = num
 
     def get_car_with_name(self, name):
+        """
+            根据车名获取一辆车
+        :param name:
+        :return:
+        """
         for car_dict in self.cars:
             if car_dict['name'] == name:    # 找到车,查看库存
                 num = car_dict['num']
@@ -39,7 +63,7 @@ class CarManager(object):
                     if num <= 0:            # 如果库存为零了，将该车从库存中删除
                         self.del_car(car)
                     else:
-                        self.update_car(car,num)
+                        self.update_car(car, num)
                     return car
                 else:
                     return
