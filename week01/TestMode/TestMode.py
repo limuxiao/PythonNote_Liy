@@ -1,6 +1,8 @@
 # -*- coding:utf-8 -*-
 class SingleTon:
-
+    """
+        测试一个单利模式
+    """
     __instance = None
 
     def __new__(cls, *args, **kwargs):
