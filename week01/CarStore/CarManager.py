@@ -1,5 +1,8 @@
 # -*- coding:utf-8 -*-
 class CarManager(object):
+    """
+        车库管理类
+    """
     def __init__(self):
         self.cars = []
 
