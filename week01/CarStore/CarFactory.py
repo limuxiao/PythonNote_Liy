@@ -10,7 +10,7 @@ class CarFactory:
 
 
 class XianDai(CarFactory):
-    
+
     pass
 
 class Linken(CarFactory):
