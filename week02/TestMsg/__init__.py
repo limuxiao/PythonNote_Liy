@@ -1,9 +1,11 @@
 # -*- coding:utf-8 -*-
 
-__all__ = ['SendMsg', 'RecvMsg']
-
 from . import SendMsg
-from . import RecvMsg
+from  .import RecvMsg
+
+print('import TestMsg')
+
+__all__ = ['SendMsg', 'RecvMsg']
 
 def main():
     pass
