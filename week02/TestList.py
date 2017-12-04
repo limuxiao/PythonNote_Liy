@@ -2,10 +2,11 @@
 
 import sys
 
+
 def testList01():
     a = [i for i in range(10)]
     print(a)
-    b = [(i, j) for i in range(3) for j in range(4,6)]
+    b = [(i, j) for i in range(3) for j in range(4, 6)]
     print(b)
     c = [i for i in range(10) if i % 2 == 0]
     print(c)
