@@ -84,6 +84,34 @@ def test03():
 
 
 def test04():
+    """
+        测试进制
+    :return:
+    """
+    print(bin(18))
+    print(oct(18))
+    print(hex(18))
+    print(int(bin(18), 2))
+    print(int(oct(18), 8))
+    print(int(hex(18), 16))
+    print(bin(9))
+    pass
+
+
+def test05():
+    """
+        测试位运算
+    :return:
+    """
+    print(5 << 1)
+    print(5 >> 1)
+    print(9 & 5)
+    print(9 | 5)
+    print(9 ^ 5)
+    print(~9)
+    a = int(bin(9), 2)
+    print(a ^ 5)
+    print(12 ^ 5)
     pass
 
 
@@ -91,7 +119,9 @@ def main():
     # print(sys.path)
     # test01()
     # test02()
-    test03()
+    # test03()
+    # test04()
+    test05()
     pass
 
 
