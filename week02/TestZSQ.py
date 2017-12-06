@@ -1,6 +1,8 @@
 # -*- coding:utf-8 -*-
 import week02.TestZhuangshiqi as TZ
 from week02.TestZhuangshiqi.liy import ZSQ
+import sys
+import os
 
 
 def test01():
@@ -8,14 +10,23 @@ def test01():
     TZ.liy.ZSQ()
 
 
-@ZSQ.check()
-def test02():
-    print('----test02----')
+@ZSQ.check02
+def test02(a):
+    print('----test02 a = %d----' % a)
+    return a
+
+
+@ZSQ.check02
+def test03():
+    print('----test03----')
 
 
 def main():
     # test01()
-    test02()
+    # print(test02(11))
+    test03()
+    # print(sys.path)
+    # print(os.getcwd())
     pass
 
 

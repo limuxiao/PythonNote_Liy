@@ -18,17 +18,24 @@ class ZSQ(object):
             if has_arg:
                 def arg_has(*args, **kwargs):
                     print('----has args----')
-                    func(*args, **kwargs)
+                    return func(*args, **kwargs)
                     pass
 
                 return arg_has
             else:
                 def arg_no():
                     print('----no args----')
-                    func()
+                    return func()
 
                 return arg_no
 
+        return inner
+
+    @staticmethod
+    def check02(func):
+        def inner(*args, **kwargs):
+            return func(*args, **kwargs)
+            pass
         return inner
 
 
@@ -56,7 +63,7 @@ def test04(*args, **kwargs):
 
 
 @ZSQ.check(has_arg=True)
-def test05(num):
+def __test05(num):
     print('----test05: num: %s----' % str(num))
 
 
@@ -64,6 +71,11 @@ def test05(num):
 @ZSQ.check()
 def test06():
     print('----test06----')
+
+
+@ZSQ.check02
+def test07(a, b):
+    print('----test07 a=%d, b=%d' % (a, b))
 
 
 def main():
@@ -74,8 +86,9 @@ def main():
     # test03(*a, **b)
     # test04(a, b)
     # test04(*a, **b)
-    # test05(50)
-    test06()
+    # __test05(50)
+    # test06()
+    test07(50)
     pass
 
 
