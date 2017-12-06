@@ -20,8 +20,14 @@ def test01():
     pass
 
 
+def test02():
+    a = (1, 2, 3, 4)
+    print(isinstance(a, Iterator))
+
+
 def main():
-    test01()
+    # test01()
+    test02()
     pass
 
 
