@@ -1,7 +1,7 @@
 # -*- coding:utf-8 -*-
 
 from . import SendMsg
-from  .import RecvMsg
+from .import RecvMsg
 
 print('import TestMsg')
 
