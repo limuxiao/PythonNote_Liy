@@ -43,6 +43,7 @@ def f2():
     print(p1.__class__.__bases__)
     print(Person.__bases__)
     print(Person.__dict__)
+    print(hasattr(p1, 'name'))
 
 
 def main():

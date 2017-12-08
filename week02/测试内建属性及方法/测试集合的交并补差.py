@@ -11,9 +11,16 @@ def f1():
     print(type(a))
     print(type(b))
 
-    b.
+    b.add(3)
+    b.add(5)
+    b.add(10)
 
     print(a & b)
+    print(a | b)
+    print(a ^ b)
+    print(a - b)
+    print(b ^ a)
+    print(b - a)
     print()
 
 
