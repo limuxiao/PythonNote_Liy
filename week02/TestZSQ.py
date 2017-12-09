@@ -1,6 +1,6 @@
 # -*- coding:utf-8 -*-
-import week02.TestZhuangshiqi as TZ
-from week02.TestZhuangshiqi.liy import ZSQ
+import week02.测试装饰器 as TZ
+from week02.测试装饰器.liy import ZSQ
 import sys
 import os
 
