@@ -1,5 +1,5 @@
 # -*- coding:utf-8 -*-
-
+import time
 
 def createNum(max):
     for i in range(max):
@@ -18,8 +18,30 @@ def test01():
     pass
 
 
+def test_a():
+    while True:
+        print('----testA----')
+        yield None
+
+
+def test_b():
+    while True:
+        print('----testB----')
+        yield None
+
+
+def test_c():
+    i = 0
+    while i < 10:
+        time.sleep(1)
+        next(test_a())
+        next(test_b())
+        i += 1
+
+
 def main():
-    test01()
+    # test01()
+    test_c()
     pass
 
 
