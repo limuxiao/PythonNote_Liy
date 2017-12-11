@@ -10,6 +10,12 @@ def copy_file(file_old, file_new):
     :param file_new:    新文件路径
     :return:
     """
+    file_read = open(file_old, 'r')
+    file_write = open(file_new, 'w')
+    file_write.write(file_read.read())
+    file_write.flush()
+    file_read.close()
+    file_write.close()
     pass
 
 
@@ -20,6 +26,8 @@ def copy_dir(dir_old, dir_new):
     :param dir_new:     新的文件夹路径
     :return:
     """
+    files = os.listdir(dir_old)
+    print(len(files))
     pass
 
 
@@ -33,12 +41,21 @@ def copy(*args):
 
     if len(args) == 1:
         dir_old = args[0]
-        dir_new = dir_old + '[附件]'
+        if os.path.isdir(dir_old):
+            dir_new = dir_old + '[附件]'
+        elif os.path.isfile(dir_old):
+            index = str(dir_old).rfind('.')
+            print(index)
+            dir_new = dir_old[:index] + '[附件]' + dir_old[index:]
+            print('复制后的文件名：%s' % str(dir_new))
     else:
         dir_old = args[0]
         dir_new = args[1]
 
-    copy_dir(dir_old, dir_new)
+    if os.path.isdir(dir_old):
+        copy_dir(dir_old, dir_new)
+    elif os.path.isfile(dir_old):
+        copy_file(dir_old, dir_new)
 
 
 def main():

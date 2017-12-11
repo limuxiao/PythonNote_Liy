@@ -1,5 +1,5 @@
 # -*- coding:utf-8 -*-
-from multiprocessing import Queue, Pool
+from multiprocessing import Queue, Process
 import time
 
 
@@ -43,10 +43,10 @@ def clear_file():
     file.close()
 
 
-def write_control():
+def write_control(q):
     # while True:
-    if not q_clear2write.empty():
-        ret = q_clear2write.get()
+    if not q.empty():
+        ret = q.get()
         if ret == 'writeable':
             print('----write start----')
             time.sleep(5)
@@ -57,47 +57,61 @@ def write_control():
         write_file('我就试试看')
 
 
-def read_control():
+def read_control(q):
     # while True:
     print('----read start----')
-    q_read2clear.put('can not clear')
+    q.put('can not clear')
     time.sleep(5)
     read_file()
     time.sleep(2)
-    q_read2clear.put('can clear')
+    q.put('can clear')
     print('----read over----')
 
 
-def clear_control():
+def clear_control(q_read, q_write):
     while True:
-        q_clear2write.put('write lock')     # 禁止写
 
-        if not q_read2clear.empty():        # 由读进程发过来的消息
-            ret = q_read2clear.get()
+        print('----q_read size:%d----' % q_read.qsize())
+        time.sleep(5)
+        q_write.put('write lock')     # 禁止写
+
+        if not q_read.empty():        # 由读进程发过来的消息
+            ret = q_read.get()
             print('----%s----' % ret)
             if ret == 'can clear':          # 可删除
                 print('----clear start----')
-                time.sleep(5)
+
                 clear_file()
                 time.sleep(2)
                 print('----clear over----')
             else:
                 pass
 
-        q_clear2write.put('writeable')      # 放开
+        q_write.put('writeable')      # 放开
 
 
 def f1():
     # write_file('我就试试看')
     # read_file()
 
-    pool = Pool(3)
-    pool.apply_async(read_control)
-    pool.apply_async(write_control)
-    pool.apply_async(clear_control)
+    # pool = Pool(3)
+    # pool.apply_async(read_control)
+    # pool.apply_async(write_control)
+    # pool.apply_async(clear_control)
 
-    pool.close()
-    pool.join()
+    # pool.close()
+    # pool.join()
+
+    p1 = Process(target=read_control, args=(q_read2clear,))
+    p2 = Process(target=write_control, args=(q_clear2write,))
+    p3 = Process(target=clear_control, args=(q_read2clear, q_clear2write,))
+
+    p1.start()
+    p2.start()
+    p3.start()
+    p1.join()
+    p2.join()
+    p3.join()
 
 
 def main():
