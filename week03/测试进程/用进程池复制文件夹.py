@@ -1,6 +1,7 @@
 # -*- coding:utf-8 -*-
 import os
 import sys
+from multiprocessing import Manager, Pool
 
 
 def copy_file(file_old, file_new):
@@ -10,8 +11,8 @@ def copy_file(file_old, file_new):
     :param file_new:    新文件路径
     :return:
     """
-    file_read = open(file_old, 'r')
-    file_write = open(file_new, 'w')
+    file_read = open(file_old, 'rb')
+    file_write = open(file_new, 'wb')
     file_write.write(file_read.read())
     file_write.flush()
     file_read.close()
@@ -26,9 +27,36 @@ def copy_dir(dir_old, dir_new):
     :param dir_new:     新的文件夹路径
     :return:
     """
-    files = os.listdir(dir_old)
-    print(len(files))
+    # 1.创建新文件夹
+    if not os.path.exists(dir_new):
+        os.mkdir(dir_new)
+
+    # 2.创建一个Queue
+    queue = Manager().Queue()
+
+    # 3.将文件名放入queue中去
+    for file_name in os.listdir(dir_old):
+        tup = (dir_old + '/' + file_name, dir_new + '/' + file_name)
+        queue.put(tup)
+
+    # 4.创建一个进程池，复制文件到新文件夹下
+    pool = Pool(3)
+    for i in range(3):
+        pool.apply_async(copy_process, args=(queue,))
+    pool.close()
+    pool.join()
+
     pass
+
+
+def copy_process(queue):
+    while not queue.empty():
+        file_name = queue.get()
+        print(file_name)
+        copy_file(file_name[0], file_name[1])
+        print('%s 复制完成' % str(file_name[0]))
+
+    print('----over----')
 
 
 def copy(*args):
@@ -58,12 +86,22 @@ def copy(*args):
         copy_file(dir_old, dir_new)
 
 
+def test_copy_file():
+    dir_path = sys.argv[1]
+    file = os.listdir(dir_path)[0]
+    file_old = dir_path + '/' + file
+    file_new = dir_path + '[附件]/' + file
+    copy_file(file_old, file_new)
+
+
 def main():
     args = sys.argv
     print(args)
     copy(*args[1::])
+    # test_copy_file()
     pass
 
 
 if __name__ == '__main__':
+    sys.argv = ['', 'daiding']
     main()
