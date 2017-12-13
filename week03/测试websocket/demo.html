@@ -1,0 +1,43 @@
+<html>
+
+<header></header>
+
+<script type="text/javascript">
+
+	var socket = new WebSocket('ws://localhost:88');  
+	socket.onopen = function() {  
+		alert(1);  
+	}
+
+	socket.onmessage = function(...value){
+		alert('onmessage')
+	}
+			
+
+
+	function test(){
+		try{
+			
+			alert(123)
+			
+			
+			socket.send('我就试试看')
+			
+		
+		}catch(e){
+			alert(e.message)
+		}
+	}
+	
+</script>
+
+<body>
+
+	
+	<button onclick="test();">Test</button>
+
+
+</body>
+
+
+</html>
