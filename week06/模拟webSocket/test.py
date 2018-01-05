@@ -41,10 +41,30 @@ def f3():
     pass
 
 
+def f4():
+    a = [4, 5, 6, 4, 6, 5, 1, 8, 6, 4, 6, 1]
+    print(a)
+    for i in range(0, len(a)):
+        for j in range(0, len(a)):
+            if a[i] > a[j]:
+                t = a[i]
+                a[i] = a[j]
+                a[j] = t
+    print(a)
+
+
+def f5():
+    recv_list = [0x88]
+    print(bytes(recv_list))
+    pass
+
+
 def main():
     # f1()
     # f2()
-    f3()
+    # f3()
+    # f4()
+    f5()
     pass
 
 

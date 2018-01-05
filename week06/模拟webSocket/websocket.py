@@ -32,31 +32,33 @@ class ClientThread(Thread):
         while True:
             try:
                 data = self.client_sock.recv(1024)
-                print('----1----')
-                a = [hex(k) for k in data]
-                print(a)
-                print('----1----')
+
                 if len(data) > 0:
+
                     real_data = self.parse_data(data)
-                    print('----2----')
-                    print(real_data)
-                    b = [hex(k) for k in real_data]
-                    print(b)
-                    # print(str(real_data, 'utf-8'))
-                    print('----2----')
-                    if len(b) <= 0:
+
+                    if data[0] == 0x88:
+                        print('----1----')
+                        recv_len = len(real_data)
+                        recv_last = [0x88, 0x2]
+                        for d in real_data:
+                            recv_last.append(d)
+
+                        print(recv_last)
+                        print('----1----')
+
+                        self.client_sock.send(bytes(recv_last))
                         self.client_sock.close()
                         break
-                    pass
+
+                    real_data = self.parse_data(data)
+                    print(str(real_data, 'utf-8'))
+
                 else:
                     self.client_sock.close()
                     print('关闭连接')
                     break
-                recv_b = bytes('1234', encoding='utf-8')
-                recv_last = [0x81, 0x4]
-                for r in recv_b:
-                    recv_last.append(r)
-                self.client_sock.send(bytes(recv_last))
+
             except socket.error as e:
                 print('异常', e)
 
