@@ -35,20 +35,7 @@ class ClientThread(Thread):
 
                 if len(data) > 0:
 
-                    real_data = self.parse_data(data)
-
                     if data[0] == 0x88:
-                        print('----1----')
-                        recv_len = len(real_data)
-                        recv_last = [0x88, 0x2]
-                        for d in real_data:
-                            recv_last.append(d)
-
-                        print(recv_last)
-                        print('----1----')
-
-                        self.client_sock.send(bytes(recv_last))
-                        self.client_sock.close()
                         break
 
                     real_data = self.parse_data(data)
@@ -88,7 +75,6 @@ class ClientThread(Thread):
         mask = msg[p:p + 4]
         data = msg[p + 4:]
         b = bytes([v ^ mask[k % 4] for k, v in enumerate(data)])
-        # return ''.join([chr(v ^ mask[k % 4]) for k, v in enumerate(data)])
         return b
 
 
