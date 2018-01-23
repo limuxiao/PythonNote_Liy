@@ -31,7 +31,7 @@ def f3():
 
     # 3.计算直方图
     x = range(img_width)
-    y = [[255 - max([int(img_grey[i][j] * 256) for j in range(img_height)]) for j in range(img_height)] for i in range(img_width)]
+    y = [[max([img_grey[i][j] * 256 for j in range(img_height)]) for j in range(img_height)] for i in range(img_width)]
     mplot.plot(x, y, 'g')
     mplot.show()
     pass
