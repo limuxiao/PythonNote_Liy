@@ -20,7 +20,7 @@ def f3():
     :return:
     """
     # 1.读取一张图片,获取纵横深
-    img_arr = mimg.imread('test2.png')
+    img_arr = mimg.imread('test3.jpg')
     img_width, img_height, img_deep = img_arr.shape
     # print('img_width = %d; img_height = %d; img_deep = %d' % (img_width, img_height, img_deep))
 
@@ -31,7 +31,7 @@ def f3():
 
     # 3.计算直方图
     x = range(img_width)
-    y = [[max([img_grey[i][j] * 256 for j in range(img_height)]) for j in range(img_height)] for i in range(img_width)]
+    y = [256 - max([img_grey[i][j] * 256 for j in range(img_height)]) for i in range(img_width)]
     mplot.plot(x, y, 'g')
     mplot.show()
     pass
@@ -60,18 +60,26 @@ def Hist(image):
 
 
 def f4():
-    image = cv2.LoadImage('test.png', 0)
-    iHist = Hist(image)
-    cv2.ShowImage('image', image)
-    cv2.ShowImage('iHist', iHist)
-    cv2.WaitKey(0)
+    img_arr = mimg.imread('test3.jpg')
+    # print(img_arr.shape)
+    img_width, img_height, img_deep = img_arr.shape
+    img_arr_r = img_arr[:, :, 0]
+    img_arr_g = img_arr[:, :, 1]
+    img_arr_b = img_arr[:, :, 2]
+    x = range(img_width)
+    yr = [max([j for j in i]) for i in img_arr_r]
+    yg = [[min([j for j in i]), max([j for j in i])] for i in img_arr_g]
+    yb = [256 - max([j for j in i]) for i in img_arr_b]
+    mplot.plot(x, yg, 'g')
+    mplot.show()
+    11001100
 
 
 def main():
     # f1()
     # f2()
-    f3()
-    # f4()
+    # f3()
+    f4()
     pass
 
 
