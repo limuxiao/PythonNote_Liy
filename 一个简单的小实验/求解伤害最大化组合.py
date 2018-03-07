@@ -49,6 +49,7 @@ def main():
     b = 16 + 24 + 16
     print(a)
     print(b)
+    print("ABCDEFGHIJKLMNOPQRSTUVWXYabcdefghijklmnopqrstuvwxy"*5000)
     pass
 
 
