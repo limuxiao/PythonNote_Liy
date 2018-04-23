@@ -97,13 +97,16 @@ def test_resize():
         测试缩放
     :return:
     """
-    img_arr = cv2.imread('djssg.jpg')
+    img_arr = cv2.imread('logo.png')
     print(img_arr.shape)
     # dsize 为一个两个元素tuple 既（width, height）, fx、fy表示在宽高上的缩放比例,当指定fx、fy时,dsiz应设为（0，0）才有效
-    img_arr_new = cv2.resize(img_arr, dsize=(0, 0), fx=0.25, fy=0.25)
+    img_arr_new = cv2.resize(img_arr, dsize=(144, 144))
     print(img_arr_new.shape)
-    plt.imshow(img_arr_new)
-    plt.show()
+    print(img_arr_new[100][100])
+    # plt.imshow(img_arr_new)
+    # plt.show()
+    # plt.imsave(img_arr_new, "icon_new.png")
+    cv2.imwrite("logo_new.png", img_arr_new)
     pass
 
 
@@ -134,9 +137,9 @@ def test_add():
 
 def main():
     # test_read_all()
-    # test_resize()
+    test_resize()
     # test_cut()
-    test_add()
+    # test_add()
     pass
 
 
