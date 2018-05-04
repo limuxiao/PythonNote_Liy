@@ -140,7 +140,14 @@ $(document).ready(function(){
 
             // 提交数据
             $.post(PATH_UPLOAD, good_info, function(result){
-                alert(JSON.parse(result).returnCode)
+                data =JSON.parse(result)
+                if('0000' == data.returnCode){
+                    btn_sub.text('提交完成')
+                }else{
+                    btn_sub.text('提交失败,重新提交')
+                    btn_sub.prop('disabled', '') 
+                }
+                
             })
 
         }
