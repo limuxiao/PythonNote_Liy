@@ -96,14 +96,14 @@ $(document).ready(function(){
         if(p_list.length != 11) return
 
         var good_info = {
-            good_name:      $(p_list[0]).text(),        // 商品名称
-            good_upc:       $(p_list[1]).text(),        // 商品编码
-            good_first:     $(p_list[2]).text(),        // 商品一级分类
-            good_second:    $(p_list[3]).text(),        // 商品二级分类
-            good_third:     $(p_list[4]).text(),        // 商品三级分类
-            good_desc:      $(p_list[5]).text(),        // 商品描述
-            good_price:     $(p_list[6]).text(),        // 商品价格
-            good_id:        $(p_list[7]).text(),        // 商品id
+            good_id:        $(p_list[0]).text(),        // 商品id
+            good_name:      $(p_list[1]).text(),        // 商品名称
+            good_upc:       $(p_list[2]).text(),        // 商品编码
+            good_first:     $(p_list[3]).text(),        // 商品一级分类
+            good_second:    $(p_list[4]).text(),        // 商品二级分类
+            good_third:     $(p_list[5]).text(),        // 商品三级分类
+            good_desc:      $(p_list[6]).text(),        // 商品描述
+            good_price:     $(p_list[7]).text(),        // 商品价格
             good_p:         $(p_list[8]).text(),        // 商品省
             good_c:         $(p_list[9]).text(),        // 商品市
             good_x:         $(p_list[10]).text(),       // 商品区县

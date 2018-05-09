@@ -1,0 +1,189 @@
+2018-05-09 09:23:21  config.py[line:24] INFO 数据库初始化完成
+2018-05-09 09:23:21  _internal.py[line:88] INFO  * Running on http://0.0.0.0:9090/ (Press CTRL+C to quit)
+2018-05-09 09:23:39  config.py[line:24] INFO *************************收到访问请求: /*************************
+2018-05-09 09:23:39  config.py[line:24] INFO 数据总量：20557
+2018-05-09 09:23:39  config.py[line:24] INFO *************************请求处理完毕*************************
+2018-05-09 09:23:39  _internal.py[line:88] INFO 127.0.0.1 - - [09/May/2018 09:23:39] "GET / HTTP/1.1" 200 -
+2018-05-09 09:23:39  _internal.py[line:88] INFO 127.0.0.1 - - [09/May/2018 09:23:39] "GET /htmls/common.css HTTP/1.1" 304 -
+2018-05-09 09:23:39  _internal.py[line:88] INFO 127.0.0.1 - - [09/May/2018 09:23:39] "GET /htmls/jquery-3.3.1.js HTTP/1.1" 304 -
+2018-05-09 09:23:39  _internal.py[line:88] INFO 127.0.0.1 - - [09/May/2018 09:23:39] "GET /htmls/common.js HTTP/1.1" 304 -
+2018-05-09 09:23:39  _internal.py[line:88] INFO 127.0.0.1 - - [09/May/2018 09:23:39] "GET /favicon.ico HTTP/1.1" 404 -
+2018-05-09 09:23:53  config.py[line:24] INFO *************************收到访问请求: /items/1*************************
+2018-05-09 09:23:53  _internal.py[line:88] INFO 127.0.0.1 - - [09/May/2018 09:23:53] "GET /items/1 HTTP/1.1" 200 -
+2018-05-09 09:24:09  config.py[line:24] INFO *************************接到请求: /uploadImg*************************
+2018-05-09 09:24:09  config.py[line:24] INFO upload_img:{'good_id': '0', 'good_name': '梦幻香皂125g', 'good_upc': '6901043810042', 'good_first': '美妆/洗护', 'good_second': '洗浴用品', 'good_third': '浴盐/香皂', 'good_desc': '梦幻', 'good_price': '0.0', 'good_p': '安徽省邮政公司', 'good_c': '池州市邮政公司', 'good_x': '石台县邮政公司', 'img_front': 'http://imgqn.koudaitong.com/upload_files/2014/09/20/FmDvke5TT5WP1UKkOPm-LwD0Z1AP.jpg%21730x0.jpg'}
+2018-05-09 09:24:09  config.py[line:24] INFO *************************结束请求*************************
+2018-05-09 09:24:09  config.py[line:24] INFO 
+
+2018-05-09 09:24:09  _internal.py[line:88] INFO 127.0.0.1 - - [09/May/2018 09:24:09] "POST /uploadImg HTTP/1.1" 200 -
+2018-05-09 09:24:09  config.py[line:24] INFO 在数据库中查到商品信息:good_name: 梦幻香皂125g, good_upc:6901043810042, status: 000
+2018-05-09 09:24:09  config.py[line:24] INFO 开始下载图片：upc:6901043810042, 图片类型：正面， 链接：http://imgqn.koudaitong.com/upload_files/2014/09/20/FmDvke5TT5WP1UKkOPm-LwD0Z1AP.jpg%21730x0.jpg
+2018-05-09 09:24:09  connectionpool.py[line:208] DEBUG Starting new HTTP connection (1): imgqn.koudaitong.com
+2018-05-09 09:24:09  connectionpool.py[line:396] DEBUG http://imgqn.koudaitong.com:80 "GET /upload_files/2014/09/20/FmDvke5TT5WP1UKkOPm-LwD0Z1AP.jpg%21730x0.jpg HTTP/1.1" 200 28296
+2018-05-09 09:24:09  config.py[line:24] INFO 图片下载成功：upc:6901043810042, 图片类型：正面， 链接：http://imgqn.koudaitong.com/upload_files/2014/09/20/FmDvke5TT5WP1UKkOPm-LwD0Z1AP.jpg%21730x0.jpg
+2018-05-09 09:24:09  config.py[line:24] INFO 待保存的商品信息：<webService.src.db.dbhelper.GoodItem object at 0x03BBAC70>
+2018-05-09 09:24:09  config.py[line:24] INFO 数据库更新商品sql: 
+
+            UPDATE items SET img_front = 'http://imgqn.koudaitong.com/upload_files/2014/09/20/FmDvke5TT5WP1UKkOPm-LwD0Z1AP.jpg%21730x0.jpg', img_side = 'None', img_obverse = 'None', status = '100', img_front_local = '6901043810042_100', 
+            img_side_local = 'None', img_obverse_local = 'None' where good_id = 0
+        
+2018-05-09 09:24:10  config.py[line:24] INFO 数据库更新商品成功：商品名：梦幻香皂125g, upc: 6901043810042, 状态：100
+2018-05-09 09:29:13  config.py[line:24] INFO 数据库初始化完成
+2018-05-09 09:29:14  _internal.py[line:88] INFO  * Running on http://0.0.0.0:9090/ (Press CTRL+C to quit)
+2018-05-09 09:29:16  config.py[line:24] INFO *************************收到访问请求: /*************************
+2018-05-09 09:29:16  config.py[line:24] INFO 数据总量：20557
+2018-05-09 09:29:16  config.py[line:24] INFO *************************请求处理完毕*************************
+2018-05-09 09:29:16  _internal.py[line:88] INFO 127.0.0.1 - - [09/May/2018 09:29:16] "GET / HTTP/1.1" 200 -
+2018-05-09 09:29:18  config.py[line:24] INFO *************************收到访问请求: /items/1*************************
+2018-05-09 09:29:18  _internal.py[line:88] INFO 127.0.0.1 - - [09/May/2018 09:29:18] "GET /items/1 HTTP/1.1" 200 -
+2018-05-09 09:30:32  config.py[line:24] INFO 数据库初始化完成
+2018-05-09 09:30:32  _internal.py[line:88] INFO  * Running on http://0.0.0.0:9090/ (Press CTRL+C to quit)
+2018-05-09 09:30:34  config.py[line:24] INFO *************************收到访问请求: /*************************
+2018-05-09 09:30:34  config.py[line:24] INFO 数据总量：20557
+2018-05-09 09:30:34  config.py[line:24] INFO *************************请求处理完毕*************************
+2018-05-09 09:30:34  _internal.py[line:88] INFO 127.0.0.1 - - [09/May/2018 09:30:34] "GET / HTTP/1.1" 200 -
+2018-05-09 09:30:36  config.py[line:24] INFO *************************收到访问请求: /items/1*************************
+2018-05-09 09:30:36  _internal.py[line:88] INFO 127.0.0.1 - - [09/May/2018 09:30:36] "GET /items/1 HTTP/1.1" 200 -
+2018-05-09 09:35:30  config.py[line:24] INFO 数据库初始化完成
+2018-05-09 09:35:30  _internal.py[line:88] INFO  * Running on http://0.0.0.0:9090/ (Press CTRL+C to quit)
+2018-05-09 09:35:34  config.py[line:24] INFO *************************收到访问请求: /*************************
+2018-05-09 09:35:34  config.py[line:24] INFO 数据总量：20557
+2018-05-09 09:35:34  config.py[line:24] INFO *************************请求处理完毕*************************
+2018-05-09 09:35:34  _internal.py[line:88] INFO 127.0.0.1 - - [09/May/2018 09:35:34] "GET / HTTP/1.1" 200 -
+2018-05-09 09:35:36  config.py[line:24] INFO *************************收到访问请求: /items/1*************************
+2018-05-09 09:35:36  _internal.py[line:88] INFO 127.0.0.1 - - [09/May/2018 09:35:36] "GET /items/1 HTTP/1.1" 200 -
+2018-05-09 09:35:42  config.py[line:24] INFO *************************接到请求: /uploadImg*************************
+2018-05-09 09:35:42  config.py[line:24] INFO upload_img:{'good_id': '0', 'good_name': '梦幻香皂125g', 'good_upc': '6901043810042', 'good_first': '美妆/洗护', 'good_second': '洗浴用品', 'good_third': '浴盐/香皂', 'good_desc': '梦幻', 'good_price': '0.0', 'good_p': '安徽省邮政公司', 'good_c': '池州市邮政公司', 'good_x': '石台县邮政公司', 'img_front': 'http://imgqn.koudaitong.com/upload_files/2014/09/20/FmDvke5TT5WP1UKkOPm-LwD0Z1AP.jpg%21730x0.jpg', 'img_side': 'http://www.sijisong.com/images/201412/goods_img/174_G_1417888984236.jpg', 'img_obverse': 'http://www.0372jsy.com/images/upload/Image/5901%283%29.jpg'}
+2018-05-09 09:35:42  config.py[line:24] INFO *************************结束请求*************************
+2018-05-09 09:35:42  config.py[line:24] INFO 
+
+2018-05-09 09:35:42  _internal.py[line:88] INFO 127.0.0.1 - - [09/May/2018 09:35:42] "POST /uploadImg HTTP/1.1" 200 -
+2018-05-09 09:35:42  config.py[line:24] INFO 在数据库中查到商品信息:good_name: 梦幻香皂125g, good_upc:6901043810042, status: 000
+2018-05-09 09:35:42  config.py[line:24] INFO 已有正面图片: 6901043810042_100
+2018-05-09 09:35:42  config.py[line:24] INFO 开始下载图片：upc:6901043810042, 图片类型：侧面， 链接：http://www.sijisong.com/images/201412/goods_img/174_G_1417888984236.jpg
+2018-05-09 09:35:42  connectionpool.py[line:208] DEBUG Starting new HTTP connection (1): www.sijisong.com
+2018-05-09 09:35:57  config.py[line:24] INFO 图片下载失败：upc:6901043810042, 图片类型：侧面， 链接：http://www.sijisong.com/images/201412/goods_img/174_G_1417888984236.jpg
+2018-05-09 09:35:57  config.py[line:24] INFO 开始下载图片：upc:6901043810042, 图片类型：反面， 链接：http://www.0372jsy.com/images/upload/Image/5901%283%29.jpg
+2018-05-09 09:35:57  connectionpool.py[line:208] DEBUG Starting new HTTP connection (1): www.0372jsy.com
+2018-05-09 09:35:57  connectionpool.py[line:396] DEBUG http://www.0372jsy.com:80 "GET /images/upload/Image/5901%283%29.jpg HTTP/1.1" 200 40965
+2018-05-09 09:35:58  config.py[line:24] INFO 图片下载成功：upc:6901043810042, 图片类型：反面， 链接：http://www.0372jsy.com/images/upload/Image/5901%283%29.jpg
+2018-05-09 09:35:58  config.py[line:24] INFO 待保存的商品信息：<webService.src.db.dbhelper.GoodItem object at 0x03968CD0>
+2018-05-09 09:35:58  config.py[line:24] INFO 数据库更新商品sql: 
+
+            UPDATE items SET img_front = 'http://imgqn.koudaitong.com/upload_files/2014/09/20/FmDvke5TT5WP1UKkOPm-LwD0Z1AP.jpg%21730x0.jpg', img_side = 'http://www.sijisong.com/images/201412/goods_img/174_G_1417888984236.jpg', img_obverse = 'http://www.0372jsy.com/images/upload/Image/5901%283%29.jpg', status = '101', img_front_local = 'None', 
+            img_side_local = 'None', img_obverse_local = '6901043810042_001' where good_id = 0
+        
+2018-05-09 09:35:58  config.py[line:24] INFO 数据库更新商品成功：商品名：梦幻香皂125g, upc: 6901043810042, 状态：101
+2018-05-09 09:46:29  config.py[line:24] INFO 数据库初始化完成
+2018-05-09 09:46:29  _internal.py[line:88] INFO  * Running on http://0.0.0.0:9090/ (Press CTRL+C to quit)
+2018-05-09 09:46:33  config.py[line:24] INFO *************************收到访问请求: /*************************
+2018-05-09 09:46:33  config.py[line:24] INFO 数据总量：20557
+2018-05-09 09:46:33  config.py[line:24] INFO *************************请求处理完毕*************************
+2018-05-09 09:46:33  _internal.py[line:88] INFO 127.0.0.1 - - [09/May/2018 09:46:33] "GET / HTTP/1.1" 200 -
+2018-05-09 09:46:34  config.py[line:24] INFO *************************收到访问请求: /items/1*************************
+2018-05-09 09:46:34  _internal.py[line:88] INFO 127.0.0.1 - - [09/May/2018 09:46:34] "GET /items/1 HTTP/1.1" 200 -
+2018-05-09 09:46:52  config.py[line:24] INFO *************************接到请求: /uploadImg*************************
+2018-05-09 09:46:52  config.py[line:24] INFO upload_img:{'good_id': '1', 'good_name': '古井贡酒年份原浆酒献礼40.6度500ml', 'good_upc': '6902018770484', 'good_first': '特色美食', 'good_second': '酒类', 'good_third': '白酒', 'good_desc': '古井', 'good_price': '6.0', 'good_p': '安徽省邮政公司', 'good_c': '池州市邮政公司', 'good_x': '石台县邮政公司', 'img_side': 'http://d6.yihaodianimg.com/N00/M01/4C/EC/CgMBmFOJoDyAXxPMAAMG0qDRhi482600.jpg'}
+2018-05-09 09:46:52  config.py[line:24] INFO *************************结束请求*************************
+2018-05-09 09:46:52  config.py[line:24] INFO 
+
+2018-05-09 09:46:52  _internal.py[line:88] INFO 127.0.0.1 - - [09/May/2018 09:46:52] "POST /uploadImg HTTP/1.1" 200 -
+2018-05-09 09:46:52  config.py[line:24] INFO 在数据库中查到商品信息:good_name: 古井贡酒年份原浆酒献礼40.6度500ml, good_upc:6902018770484, status: 000
+2018-05-09 09:46:52  config.py[line:24] INFO 开始下载图片：upc:6902018770484, 图片类型：侧面， 链接：http://d6.yihaodianimg.com/N00/M01/4C/EC/CgMBmFOJoDyAXxPMAAMG0qDRhi482600.jpg
+2018-05-09 09:46:52  connectionpool.py[line:208] DEBUG Starting new HTTP connection (1): d6.yihaodianimg.com
+2018-05-09 09:46:53  connectionpool.py[line:396] DEBUG http://d6.yihaodianimg.com:80 "GET /N00/M01/4C/EC/CgMBmFOJoDyAXxPMAAMG0qDRhi482600.jpg HTTP/1.1" 200 197363
+2018-05-09 09:46:53  config.py[line:24] INFO 图片下载成功：upc:6902018770484, 图片类型：侧面， 链接：http://d6.yihaodianimg.com/N00/M01/4C/EC/CgMBmFOJoDyAXxPMAAMG0qDRhi482600.jpg
+2018-05-09 09:46:53  config.py[line:24] INFO 待保存的商品信息：<webService.src.db.dbhelper.GoodItem object at 0x037FBCF0>
+2018-05-09 09:46:53  config.py[line:24] INFO 数据库更新商品sql: 
+
+            UPDATE items SET img_front = 'None', img_side = 'http://d6.yihaodianimg.com/N00/M01/4C/EC/CgMBmFOJoDyAXxPMAAMG0qDRhi482600.jpg', img_obverse = 'None', status = '010', img_front_local = 'None', 
+            img_side_local = '6902018770484_010', img_obverse_local = 'None' where good_id = 1
+        
+2018-05-09 09:46:53  config.py[line:24] INFO 数据库更新商品成功：商品名：古井贡酒年份原浆酒献礼40.6度500ml, upc: 6902018770484, 状态：010
+2018-05-09 09:47:08  config.py[line:24] INFO *************************收到访问请求: /*************************
+2018-05-09 09:47:08  config.py[line:24] INFO 数据总量：20557
+2018-05-09 09:47:08  config.py[line:24] INFO *************************请求处理完毕*************************
+2018-05-09 09:47:08  _internal.py[line:88] INFO 127.0.0.1 - - [09/May/2018 09:47:08] "GET / HTTP/1.1" 200 -
+2018-05-09 09:47:09  config.py[line:24] INFO *************************收到访问请求: /items/1*************************
+2018-05-09 09:47:09  _internal.py[line:88] INFO 127.0.0.1 - - [09/May/2018 09:47:09] "GET /items/1 HTTP/1.1" 200 -
+2018-05-09 09:47:31  config.py[line:24] INFO *************************接到请求: /uploadImg*************************
+2018-05-09 09:47:31  config.py[line:24] INFO upload_img:{'good_id': '1', 'good_name': '古井贡酒年份原浆酒献礼40.6度500ml', 'good_upc': '6902018770484', 'good_first': '特色美食', 'good_second': '酒类', 'good_third': '白酒', 'good_desc': '古井', 'good_price': '6.0', 'good_p': '安徽省邮政公司', 'good_c': '池州市邮政公司', 'good_x': '石台县邮政公司', 'img_front': 'http://img11.360buyimg.com/n7/g15/M03/14/1F/rBEhWFNGYKEIAAAAAAKjbqTv4rgAALjjwFnGg0AAqOG680.jpg', 'img_side': 'http://d6.yihaodianimg.com/N00/M01/4C/EC/CgMBmFOJoDyAXxPMAAMG0qDRhi482600.jpg', 'img_obverse': 'http://img1.ccjoin.com/data/files/store_12401/goods_92/300x300_201411211014523728.png'}
+2018-05-09 09:47:31  config.py[line:24] INFO *************************结束请求*************************
+2018-05-09 09:47:31  config.py[line:24] INFO 
+
+2018-05-09 09:47:31  _internal.py[line:88] INFO 127.0.0.1 - - [09/May/2018 09:47:31] "POST /uploadImg HTTP/1.1" 200 -
+2018-05-09 09:47:31  config.py[line:24] INFO 在数据库中查到商品信息:good_name: 古井贡酒年份原浆酒献礼40.6度500ml, good_upc:6902018770484, status: 000
+2018-05-09 09:47:31  config.py[line:24] INFO 已有侧面图片: 6902018770484_010
+2018-05-09 09:47:31  config.py[line:24] INFO 开始下载图片：upc:6902018770484, 图片类型：正面， 链接：http://img11.360buyimg.com/n7/g15/M03/14/1F/rBEhWFNGYKEIAAAAAAKjbqTv4rgAALjjwFnGg0AAqOG680.jpg
+2018-05-09 09:47:31  connectionpool.py[line:208] DEBUG Starting new HTTP connection (1): img11.360buyimg.com
+2018-05-09 09:47:31  connectionpool.py[line:396] DEBUG http://img11.360buyimg.com:80 "GET /n7/g15/M03/14/1F/rBEhWFNGYKEIAAAAAAKjbqTv4rgAALjjwFnGg0AAqOG680.jpg HTTP/1.1" 200 22243
+2018-05-09 09:47:31  config.py[line:24] INFO 图片下载成功：upc:6902018770484, 图片类型：正面， 链接：http://img11.360buyimg.com/n7/g15/M03/14/1F/rBEhWFNGYKEIAAAAAAKjbqTv4rgAALjjwFnGg0AAqOG680.jpg
+2018-05-09 09:47:31  config.py[line:24] INFO 开始下载图片：upc:6902018770484, 图片类型：反面， 链接：http://img1.ccjoin.com/data/files/store_12401/goods_92/300x300_201411211014523728.png
+2018-05-09 09:47:31  connectionpool.py[line:208] DEBUG Starting new HTTP connection (1): img1.ccjoin.com
+2018-05-09 09:47:31  connectionpool.py[line:396] DEBUG http://img1.ccjoin.com:80 "GET /data/files/store_12401/goods_92/300x300_201411211014523728.png HTTP/1.1" 200 82404
+2018-05-09 09:47:31  config.py[line:24] INFO 图片下载成功：upc:6902018770484, 图片类型：反面， 链接：http://img1.ccjoin.com/data/files/store_12401/goods_92/300x300_201411211014523728.png
+2018-05-09 09:47:31  config.py[line:24] INFO 待保存的商品信息：<webService.src.db.dbhelper.GoodItem object at 0x03976790>
+2018-05-09 09:47:31  config.py[line:24] INFO 数据库更新商品sql: 
+
+            UPDATE items SET img_front = 'http://img11.360buyimg.com/n7/g15/M03/14/1F/rBEhWFNGYKEIAAAAAAKjbqTv4rgAALjjwFnGg0AAqOG680.jpg', img_side = 'http://d6.yihaodianimg.com/N00/M01/4C/EC/CgMBmFOJoDyAXxPMAAMG0qDRhi482600.jpg', img_obverse = 'http://img1.ccjoin.com/data/files/store_12401/goods_92/300x300_201411211014523728.png', status = '111', img_front_local = '6902018770484_100', 
+            img_side_local = '6902018770484_010', img_obverse_local = '6902018770484_001' where good_id = 1
+        
+2018-05-09 09:47:31  config.py[line:24] INFO 数据库更新商品成功：商品名：古井贡酒年份原浆酒献礼40.6度500ml, upc: 6902018770484, 状态：111
+2018-05-09 09:47:40  config.py[line:24] INFO *************************收到访问请求: /*************************
+2018-05-09 09:47:40  config.py[line:24] INFO 数据总量：20557
+2018-05-09 09:47:40  config.py[line:24] INFO *************************请求处理完毕*************************
+2018-05-09 09:47:40  _internal.py[line:88] INFO 127.0.0.1 - - [09/May/2018 09:47:40] "GET / HTTP/1.1" 200 -
+2018-05-09 09:47:41  config.py[line:24] INFO *************************收到访问请求: /items/1*************************
+2018-05-09 09:47:41  _internal.py[line:88] INFO 127.0.0.1 - - [09/May/2018 09:47:41] "GET /items/1 HTTP/1.1" 200 -
+2018-05-09 09:56:57  config.py[line:24] INFO 数据库初始化完成
+2018-05-09 09:56:57  _internal.py[line:88] INFO  * Running on http://0.0.0.0:9090/ (Press CTRL+C to quit)
+2018-05-09 09:57:26  config.py[line:24] INFO *************************收到访问请求: /*************************
+2018-05-09 09:57:26  config.py[line:24] INFO 数据总量：20557
+2018-05-09 09:57:26  config.py[line:24] INFO *************************请求处理完毕*************************
+2018-05-09 09:57:26  _internal.py[line:88] INFO 127.0.0.1 - - [09/May/2018 09:57:26] "GET / HTTP/1.1" 200 -
+2018-05-09 09:57:28  config.py[line:24] INFO *************************收到访问请求: /items/1*************************
+2018-05-09 09:57:28  _internal.py[line:88] INFO 127.0.0.1 - - [09/May/2018 09:57:28] "GET /items/1 HTTP/1.1" 200 -
+2018-05-09 09:57:41  config.py[line:24] INFO *************************收到访问请求: /*************************
+2018-05-09 09:57:41  config.py[line:24] INFO 数据总量：20557
+2018-05-09 09:57:41  config.py[line:24] INFO *************************请求处理完毕*************************
+2018-05-09 09:57:41  _internal.py[line:88] INFO 127.0.0.1 - - [09/May/2018 09:57:41] "GET / HTTP/1.1" 200 -
+2018-05-09 09:57:42  config.py[line:24] INFO *************************收到访问请求: /items/1*************************
+2018-05-09 09:57:42  _internal.py[line:88] INFO 127.0.0.1 - - [09/May/2018 09:57:42] "GET /items/1 HTTP/1.1" 200 -
+2018-05-09 09:57:51  config.py[line:24] INFO *************************收到访问请求: /*************************
+2018-05-09 09:57:51  config.py[line:24] INFO 数据总量：20557
+2018-05-09 09:57:51  config.py[line:24] INFO *************************请求处理完毕*************************
+2018-05-09 09:57:51  _internal.py[line:88] INFO 127.0.0.1 - - [09/May/2018 09:57:51] "GET / HTTP/1.1" 200 -
+2018-05-09 09:59:10  config.py[line:24] INFO 数据库初始化完成
+2018-05-09 09:59:11  _internal.py[line:88] INFO  * Running on http://0.0.0.0:9090/ (Press CTRL+C to quit)
+2018-05-09 09:59:13  config.py[line:24] INFO *************************收到访问请求: /*************************
+2018-05-09 09:59:13  config.py[line:24] INFO 数据总量：20557
+2018-05-09 09:59:13  config.py[line:24] INFO *************************请求处理完毕*************************
+2018-05-09 09:59:13  _internal.py[line:88] INFO 127.0.0.1 - - [09/May/2018 09:59:13] "GET / HTTP/1.1" 200 -
+2018-05-09 09:59:14  config.py[line:24] INFO *************************收到访问请求: /items/2*************************
+2018-05-09 09:59:14  _internal.py[line:88] INFO 127.0.0.1 - - [09/May/2018 09:59:14] "GET /items/2 HTTP/1.1" 200 -
+2018-05-09 09:59:15  config.py[line:24] INFO *************************收到访问请求: /items/1*************************
+2018-05-09 09:59:15  _internal.py[line:88] INFO 127.0.0.1 - - [09/May/2018 09:59:15] "GET /items/1 HTTP/1.1" 200 -
+2018-05-09 09:59:28  config.py[line:24] INFO *************************接到请求: /uploadImg*************************
+2018-05-09 09:59:28  config.py[line:24] INFO upload_img:{'good_id': '0', 'good_name': '梦幻香皂125g', 'good_upc': '6901043810042', 'good_first': '美妆/洗护', 'good_second': '洗浴用品', 'good_third': '浴盐/香皂', 'good_desc': '梦幻', 'good_price': '0.0', 'good_p': '安徽省邮政公司', 'good_c': '池州市邮政公司', 'good_x': '石台县邮政公司', 'img_front': 'http://imgqn.koudaitong.com/upload_files/2014/09/20/FmDvke5TT5WP1UKkOPm-LwD0Z1AP.jpg%21730x0.jpg'}
+2018-05-09 09:59:28  config.py[line:24] INFO *************************结束请求*************************
+2018-05-09 09:59:28  config.py[line:24] INFO 
+
+2018-05-09 09:59:28  _internal.py[line:88] INFO 127.0.0.1 - - [09/May/2018 09:59:28] "POST /uploadImg HTTP/1.1" 200 -
+2018-05-09 09:59:28  config.py[line:24] INFO 在数据库中查到商品信息:good_name: 梦幻香皂125g, good_upc:6901043810042, status: 000
+2018-05-09 09:59:28  config.py[line:24] INFO 开始下载图片：upc:6901043810042, 图片类型：正面， 链接：http://imgqn.koudaitong.com/upload_files/2014/09/20/FmDvke5TT5WP1UKkOPm-LwD0Z1AP.jpg%21730x0.jpg
+2018-05-09 09:59:28  connectionpool.py[line:208] DEBUG Starting new HTTP connection (1): imgqn.koudaitong.com
+2018-05-09 09:59:28  connectionpool.py[line:396] DEBUG http://imgqn.koudaitong.com:80 "GET /upload_files/2014/09/20/FmDvke5TT5WP1UKkOPm-LwD0Z1AP.jpg%21730x0.jpg HTTP/1.1" 200 28296
+2018-05-09 09:59:28  config.py[line:24] INFO 图片下载成功：upc:6901043810042, 图片类型：正面， 链接：http://imgqn.koudaitong.com/upload_files/2014/09/20/FmDvke5TT5WP1UKkOPm-LwD0Z1AP.jpg%21730x0.jpg
+2018-05-09 09:59:28  config.py[line:24] INFO 待保存的商品信息：<webService.src.db.dbhelper.GoodItem object at 0x03968CB0>
+2018-05-09 09:59:28  config.py[line:24] INFO 数据库更新商品sql: 
+
+            UPDATE items SET img_front = 'http://imgqn.koudaitong.com/upload_files/2014/09/20/FmDvke5TT5WP1UKkOPm-LwD0Z1AP.jpg%21730x0.jpg', img_side = 'None', img_obverse = 'None', status = '100', img_front_local = '6901043810042_100', 
+            img_side_local = 'None', img_obverse_local = 'None' where good_id = 0
+        
+2018-05-09 09:59:28  config.py[line:24] INFO 数据库更新商品成功：商品名：梦幻香皂125g, upc: 6901043810042, 状态：100
+2018-05-09 09:59:33  config.py[line:24] INFO *************************收到访问请求: /*************************
+2018-05-09 09:59:33  config.py[line:24] INFO 数据总量：20557
+2018-05-09 09:59:33  config.py[line:24] INFO *************************请求处理完毕*************************
+2018-05-09 09:59:33  _internal.py[line:88] INFO 127.0.0.1 - - [09/May/2018 09:59:33] "GET / HTTP/1.1" 200 -
+2018-05-09 09:59:34  config.py[line:24] INFO *************************收到访问请求: /items/1*************************
+2018-05-09 09:59:34  _internal.py[line:88] INFO 127.0.0.1 - - [09/May/2018 09:59:34] "GET /items/1 HTTP/1.1" 200 -

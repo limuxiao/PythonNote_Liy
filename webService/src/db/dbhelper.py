@@ -1,14 +1,14 @@
 # -*- coding:utf-8 -*-
 import sqlite3
-from webService.src.tools import Log
 import threading
 import time
+from webService.src.config import Log
 
 TABLE_NAME = 'items'
 
 CREATE_SQL = '''
             CREATE TABLE IF NOT EXISTS %s(
-                good_id VARCHAR(20) PRIMARY KEY NOT NULL, 
+                good_id INT(10) PRIMARY KEY NOT NULL, 
                 good_name VARCHAR(50),
                 good_upc VARCHAR(20) NOT NULL,
                 good_first VARCHAR(20),
@@ -26,7 +26,8 @@ CREATE_SQL = '''
                 status VARCHAR(3),
                 img_front_local VARCHAR(100),
                 img_side_local VARCHAR(100),
-                img_obverse_local VARCHAR(100)
+                img_obverse_local VARCHAR(100),
+                good_imgs VARCHAR(2000)
             )
 ''' % TABLE_NAME
 
@@ -36,25 +37,50 @@ class GoodItem(object):
         商品类
     """
 
-    def __init__(self, info={}):
-        self.good_name = info.get('good_name')
-        self.good_upc = info.get('good_upc')
-        self.good_first = info.get('good_first')
-        self.good_second = info.get('good_second')
-        self.good_third = info.get('good_third')
-        self.good_desc = info.get('good_desc')
-        self.good_price = info.get('good_price')
-        self.good_id = info.get('good_id')
-        self.good_p = info.get('good_p')
-        self.good_c = info.get('good_c')
-        self.good_x = info.get('good_x')
-        self.img_front = info.get('img_front')
-        self.img_side = info.get('img_side')
-        self.img_obverse = info.get('img_obverse')
-        self.status = '000'
-        self.img_front_local = ''
-        self.img_side_local = ''
-        self.img_obverse_local = ''
+    def __init__(self, info_dict={}, info_tuple=()):
+        if info_dict:
+            self.good_id = info_dict.get('good_id')
+            self.good_name = info_dict.get('good_name')
+            self.good_upc = info_dict.get('good_upc')
+            self.good_first = info_dict.get('good_first')
+            self.good_second = info_dict.get('good_second')
+            self.good_third = info_dict.get('good_third')
+            self.good_desc = info_dict.get('good_desc')
+            self.good_price = info_dict.get('good_price')
+            self.good_p = info_dict.get('good_p')
+            self.good_c = info_dict.get('good_c')
+            self.good_x = info_dict.get('good_x')
+            self.img_front = info_dict.get('img_front')
+            self.img_side = info_dict.get('img_side')
+            self.img_obverse = info_dict.get('img_obverse')
+            self.status = info_dict.get('img_obverse_local')
+            self.img_front_local = info_dict.get('img_front_local')
+            self.img_side_local = info_dict.get('img_side_local')
+            self.img_obverse_local = info_dict.get('img_obverse_local')
+            self.good_imgs = info_dict.get('good_imgs')
+            if self.status is None:
+                self.status = '000'
+        elif info_tuple and len(info_tuple) >= 20:
+            self.good_id = info_tuple[0]
+            self.good_name = info_tuple[1]
+            self.good_upc = info_tuple[2]
+            self.good_first = info_tuple[3]
+            self.good_second = info_tuple[4]
+            self.good_third = info_tuple[5]
+            self.good_desc = info_tuple[6]
+            self.good_price = info_tuple[7]
+            self.good_p = info_tuple[8]
+            self.good_c = info_tuple[9]
+            self.good_x = info_tuple[10]
+            self.img_front = info_tuple[11]
+            self.img_side = info_tuple[12]
+            self.img_obverse = info_tuple[13]
+            self.create_time = info_tuple[14]
+            self.status = info_tuple[15]
+            self.img_front_local = info_tuple[16]
+            self.img_side_local = info_tuple[17]
+            self.img_obverse_local = info_tuple[18]
+            self.good_imgs = eval(info_tuple[19])
 
 
 class DBHelper(object):
@@ -78,8 +104,8 @@ class DBHelper(object):
 
     @classmethod
     def insert_or_update(cls, item):
-        items = cls.select_item('good_upc', item.good_upc)
-        if items:
+        i = cls.select_item('good_id', item.good_id)
+        if i:
             cls.update_item(item)
         else:
             cls.insert_item(item)
@@ -96,7 +122,33 @@ class DBHelper(object):
         select_sql = '''
             SELECT * FROM %s where %s = %s
         ''' % (TABLE_NAME, key, value)
-        return cls.cursor.execute(select_sql)
+        l = [GoodItem(info_tuple=item) for item in cls.cursor.execute(select_sql)]
+        if l:
+            return l[0]
+        return None
+
+    @classmethod
+    def select_items(cls, page=1, page_size=20) -> list:
+        """
+            分页查询
+        :param page:
+        :param page_size:
+        :return:
+
+        """
+        select_sql = '''
+            SELECT * FROM %s ORDER BY good_id LIMIT %d OFFSET %d * %d
+        ''' % (TABLE_NAME, page_size, page - 1, page_size)
+        return [GoodItem(info_tuple=item) for item in cls.cursor.execute(select_sql)]
+
+    @classmethod
+    def select_count(cls):
+        select_sql = '''
+            SELECT count(*) FROM items
+        '''
+        res = cls.cursor.execute(select_sql)
+        for r in res:
+            return r[0]
 
     @classmethod
     def insert_item(cls, item):
@@ -105,22 +157,26 @@ class DBHelper(object):
         :param item:
         :return:
         """
-        cls.lock.acquire()      # 加线程锁
-        cls.conn.execute("BEGIN TRANSACTION")       # 开启事务
+        cls.lock.acquire()  # 加线程锁
+        cls.conn.execute("BEGIN TRANSACTION")  # 开启事务
         time_str = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))
         insert_sql = '''
             INSERT INTO %s (good_id, good_name, good_upc, good_first, good_second
             , good_third, good_desc, good_price, good_p, good_c, good_x, img_front
-            , img_side, img_obverse, img_front_local, img_side_local, img_obverse_local,create_time, status)
-             VALUES('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s'
-             , '%s', '%s', '%s', '%s', '%s', '%s')
-        ''' % (TABLE_NAME,  item.good_id, item.good_name, item.good_upc, item.good_first, item.good_second
-               , item.good_third, item.good_desc, item.good_price, item.good_p, item.good_c, item.good_x, item.img_front
-               , item.img_side, item.img_obverse, item.img_front_local, item.img_side_local, item.img_obverse_local
-               , time_str, item.status)
+            , img_side, img_obverse, img_front_local, img_side_local, img_obverse_local,create_time, status, good_imgs)
+             VALUES(%s, '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s'
+             , '%s', '%s', '%s', '%s', '%s', '%s', '%s')
+        ''' % (TABLE_NAME, item.good_id, item.good_name.replace('\'', '\'\''), item.good_upc, item.good_first,
+               item.good_second,
+               item.good_third, item.good_desc.replace('\'', '\'\''), item.good_price, item.good_p, item.good_c,
+               item.good_x, item.img_front, item.img_side, item.img_obverse, item.img_front_local,
+               item.img_side_local, item.img_obverse_local, time_str, item.status,
+               str(item.good_imgs).replace('\'', '\'\''))
+
+        Log.info('数据库新增商品sql: \n%s' % insert_sql)
         cls.cursor.execute(insert_sql)
-        cls.conn.execute("COMMIT")                  # 结束事务
-        Log.info('数据库保存商品成功：商品名：%s, upc: %s, 状态：%s' % (item.good_name, item.good_upc, item.status))
+        cls.conn.execute("COMMIT")  # 结束事务
+        Log.info('数据库添加商品成功：商品名：%s, upc: %s, 状态：%s' % (item.good_name, item.good_upc, item.status))
         cls.lock.release()  # 释放锁
 
     @classmethod
@@ -133,18 +189,29 @@ class DBHelper(object):
         cls.lock.acquire()  # 加线程锁
         cls.conn.execute("BEGIN TRANSACTION")  # 开启事务
         update_sql = '''
-            UPDATE items SET
-        '''
+            UPDATE %s SET img_front = '%s', img_side = '%s', img_obverse = '%s', status = '%s', img_front_local = '%s', 
+            img_side_local = '%s', img_obverse_local = '%s' where good_id = %s
+        ''' % (TABLE_NAME, item.img_front, item.img_side, item.img_obverse, item.status, item.img_front_local,
+               item.img_side_local, item.img_obverse_local, item.good_id)
+
+        Log.info('数据库更新商品sql: \n%s' % update_sql)
+
         cls.cursor.execute(update_sql)
         cls.conn.execute("COMMIT")  # 结束事务
-        cls.lock.release()      # 释放锁
+        Log.info('数据库更新商品成功：商品名：%s, upc: %s, 状态：%s' % (item.good_name, item.good_upc, item.status))
+        cls.lock.release()  # 释放锁
+
+    @classmethod
+    def execute_sql(cls, sql):
+        pass
 
 
 def main():
-    DBHelper.init()
-    item = GoodItem({'good_id': '01', 'good_name': '商品名称', 'good_upc': '123456789'})
-    DBHelper.insert_item(item)
-    pass
+    # DBHelper.init()
+    # print(DBHelper.select_count())
+    param = {}
+    item = GoodItem(param)
+    print(item.status)
 
 
 if __name__ == '__main__':
