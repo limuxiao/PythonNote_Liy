@@ -4,24 +4,31 @@
 <html  style="width:100%; height:100%; overflow: hidden;">
     <head>
         <meta charset="utf-8"/>
-        <title></title>
-         <link rel="stylesheet" type="text/css" href="./htmls/common.css"/>
-			<script type="text/javascript" src="./htmls/jquery-3.3.1.js"></script>
-			<script type="text/javascript" src="./htmls/common.js"></script>
+        <meta http-equiv="Pragma" content="no-cache">
+        <meta http-equiv="Cache-control" content="no-cache">
+        <meta http-equiv="Cache" content="no-cache">
+
+        <title>筛选图片</title>
+        
+        <link rel="stylesheet" type="text/css" href="./htmls/common.css"/>
+        <script type="text/javascript" src="./htmls/jquery-3.3.1.js"></script>
+        <script type="text/javascript" src="./htmls/common.js"></script>
     </head>
     <body style="height: 100%; padding: 0; margin: 0;">
-        <div style="width:100%; height:10%; padding: 0; margin: 0; background-color:#97EBDF;" align="center">
+        <div class="div_title" align="center">
             <h1 id='title'></h1>
+            <div style="float: right;"><button id="btn_result">查看结果</button></div>
         </div>
-        <div style="width:100%; height:90%;">
-            <div id="menu" style="height:100%;width:10%;float:left; overflow-y: auto;">
-    
+        <div class="div_content">
+            <div id="menu" class="div_content_menu">
+
 			{% for d in data %}
-				<a href="javascript:()" style="color: #9932CD;" onclick="load_source('./items/{{d}}', '第{{d}}页');">第{{d}}页</a><br>
+				<a href="javascript:(0)" onclick="load_source('./items/{{d}}', '第{{d}}页');">第{{d}}页</a><br>
             {% endfor %}
+            
             </div>
-            <div id="content" style="background-color:#EEEEEE;width:90%;float:right;height:100%;">
-                <iframe id="source" style="width:100%; height:100%"></iframe>
+            <div id="content" class="div_content_main">
+                <iframe id="source"></iframe>
             </div>
         </div>
     </body>

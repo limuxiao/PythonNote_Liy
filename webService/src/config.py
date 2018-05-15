@@ -1,12 +1,18 @@
 # -*- coding:utf-8 -*-
 import logging
 import time
+import socket
 
-config = {
 
-    'page_size': 20,
+def get_host_ip() -> str:
+    try:
+        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        s.connect(('8.8.8.8', 80))
+        ip = s.getsockname()[0]
+    finally:
+        s.close()
 
-}
+    return ip
 
 
 class Log(object):
@@ -22,3 +28,13 @@ class Log(object):
     @classmethod
     def info(cls, msg):
         logging.info(msg)
+
+
+config = {
+
+    'page_size': 20,
+    'port': '9090',
+    'host': get_host_ip(),
+}
+
+

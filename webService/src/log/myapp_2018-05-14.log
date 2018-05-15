@@ -1,0 +1,1335 @@
+2018-05-14 15:10:40  config.py[line:24] INFO 数据库初始化完成
+2018-05-14 15:10:40  _internal.py[line:88] INFO  * Running on http://0.0.0.0:9090/ (Press CTRL+C to quit)
+2018-05-14 15:10:51  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 15:10:51] "GET /result HTTP/1.1" 200 -
+2018-05-14 15:10:51  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 15:10:51] "GET /htmls/common.css HTTP/1.1" 200 -
+2018-05-14 15:10:51  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 15:10:51] "GET /htmls/jquery-3.3.1.js HTTP/1.1" 200 -
+2018-05-14 15:10:51  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 15:10:51] "GET /htmls/common.js HTTP/1.1" 200 -
+2018-05-14 15:10:53  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 15:10:53  config.py[line:24] INFO getResultPage:{'status': '011'}
+2018-05-14 15:10:53  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status = '011'  and  1=1  
+        
+2018-05-14 15:10:53  config.py[line:24] INFO *************************/getResultPage 请求处理完毕:操作成功*************************
+2018-05-14 15:10:53  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 15:10:53] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 15:10:53  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 15:10:53  config.py[line:24] INFO getResultPage:{'status': '111'}
+2018-05-14 15:10:53  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status = '111'  and  1=1  
+        
+2018-05-14 15:10:53  config.py[line:24] INFO *************************/getResultPage 请求处理完毕:操作成功*************************
+2018-05-14 15:10:53  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 15:10:53] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 15:10:54  config.py[line:24] INFO *************************收到访问请求: /resultList*************************
+2018-05-14 15:10:54  config.py[line:24] INFO resultList:{'status': '111', 'page': '1'}
+2018-05-14 15:10:54  config.py[line:24] INFO 数据库分页查询sql: 
+
+            SELECT * FROM items_test  where  status='111'  and  1=1  ORDER BY good_id LIMIT 20 OFFSET 0 * 20
+        
+2018-05-14 15:10:54  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 15:10:54] "GET /resultList?status=111&page=1 HTTP/1.1" 200 -
+2018-05-14 15:10:54  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 15:10:54] "GET /imgs/6901043810042_010.jpg HTTP/1.1" 200 -
+2018-05-14 17:04:55  config.py[line:24] INFO 数据库初始化完成
+2018-05-14 17:04:55  _internal.py[line:88] INFO  * Running on http://0.0.0.0:9090/ (Press CTRL+C to quit)
+2018-05-14 17:06:04  config.py[line:24] INFO *************************收到访问请求: /*************************
+2018-05-14 17:06:04  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  
+        
+2018-05-14 17:06:04  config.py[line:24] INFO 数据总量：20557
+2018-05-14 17:06:04  config.py[line:24] INFO *************************/ 请求处理完毕*************************
+2018-05-14 17:06:04  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:06:04] "GET / HTTP/1.1" 200 -
+2018-05-14 17:06:05  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:06:05] "GET /favicon.ico HTTP/1.1" 404 -
+2018-05-14 17:06:07  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:06:07] "GET /result HTTP/1.1" 200 -
+2018-05-14 17:06:09  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:06:09  config.py[line:24] INFO getResultPage:{'status': '011'}
+2018-05-14 17:06:09  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status = '011'  and  1=1  
+        
+2018-05-14 17:06:09  config.py[line:24] INFO *************************/getResultPage 请求处理完毕:操作成功*************************
+2018-05-14 17:06:09  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:06:09] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:06:10  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:06:10  config.py[line:24] INFO getResultPage:{'status': '111'}
+2018-05-14 17:06:10  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status = '111'  and  1=1  
+        
+2018-05-14 17:06:10  config.py[line:24] INFO *************************/getResultPage 请求处理完毕:操作成功*************************
+2018-05-14 17:06:10  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:06:10] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:06:11  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:06:11  config.py[line:24] INFO getResultPage:{'status': '101'}
+2018-05-14 17:06:11  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status = '101'  and  1=1  
+        
+2018-05-14 17:06:11  config.py[line:24] INFO *************************/getResultPage 请求处理完毕:操作成功*************************
+2018-05-14 17:06:11  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:06:11] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:06:12  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:06:12  config.py[line:24] INFO getResultPage:{'status': '111'}
+2018-05-14 17:06:12  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status = '111'  and  1=1  
+        
+2018-05-14 17:06:12  config.py[line:24] INFO *************************/getResultPage 请求处理完毕:操作成功*************************
+2018-05-14 17:06:12  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:06:12] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:06:12  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:06:12  config.py[line:24] INFO getResultPage:{'status': '101'}
+2018-05-14 17:06:12  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status = '101'  and  1=1  
+        
+2018-05-14 17:06:12  config.py[line:24] INFO *************************/getResultPage 请求处理完毕:操作成功*************************
+2018-05-14 17:06:12  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:06:12] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:06:13  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:06:13  config.py[line:24] INFO getResultPage:{'status': '100'}
+2018-05-14 17:06:13  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status = '100'  and  1=1  
+        
+2018-05-14 17:06:13  config.py[line:24] INFO *************************/getResultPage 请求处理完毕:操作成功*************************
+2018-05-14 17:06:13  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:06:13] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:06:14  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:06:14  config.py[line:24] INFO getResultPage:{'status': '000'}
+2018-05-14 17:06:14  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status = '000'  and  1=1  
+        
+2018-05-14 17:06:14  config.py[line:24] INFO *************************/getResultPage 请求处理完毕:操作成功*************************
+2018-05-14 17:06:14  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:06:14] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:06:19  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:06:19  config.py[line:24] INFO getResultPage:{'status': '100'}
+2018-05-14 17:06:19  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status = '100'  and  1=1  
+        
+2018-05-14 17:06:19  config.py[line:24] INFO *************************/getResultPage 请求处理完毕:操作成功*************************
+2018-05-14 17:06:19  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:06:19] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:06:20  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:06:20  config.py[line:24] INFO getResultPage:{'status': '110'}
+2018-05-14 17:06:20  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status = '110'  and  1=1  
+        
+2018-05-14 17:06:20  config.py[line:24] INFO *************************/getResultPage 请求处理完毕:操作成功*************************
+2018-05-14 17:06:20  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:06:20] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:06:20  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:06:20  config.py[line:24] INFO getResultPage:{'status': '111'}
+2018-05-14 17:06:20  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status = '111'  and  1=1  
+        
+2018-05-14 17:06:20  config.py[line:24] INFO *************************/getResultPage 请求处理完毕:操作成功*************************
+2018-05-14 17:06:20  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:06:20] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:13:33  config.py[line:24] INFO 数据库初始化完成
+2018-05-14 17:13:34  _internal.py[line:88] INFO  * Running on http://0.0.0.0:9090/ (Press CTRL+C to quit)
+2018-05-14 17:13:43  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:13:43] "GET /result HTTP/1.1" 200 -
+2018-05-14 17:13:43  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:13:43] "GET /htmls/common.js HTTP/1.1" 200 -
+2018-05-14 17:13:43  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:13:43] "GET /htmls/common.css HTTP/1.1" 200 -
+2018-05-14 17:13:43  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:13:43] "GET /htmls/jquery-3.3.1.js HTTP/1.1" 200 -
+2018-05-14 17:13:43  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:13:43  config.py[line:24] INFO getResultPage:{'status': '111'}
+2018-05-14 17:13:43  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status = '111'  and  1=1  
+        
+2018-05-14 17:13:43  config.py[line:24] INFO *************************/getResultPage 请求处理完毕:操作成功*************************
+2018-05-14 17:13:43  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:13:43] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:13:45  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:13:45  config.py[line:24] INFO getResultPage:{'status': '101'}
+2018-05-14 17:13:45  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status = '101'  and  1=1  
+        
+2018-05-14 17:13:45  config.py[line:24] INFO *************************/getResultPage 请求处理完毕:操作成功*************************
+2018-05-14 17:13:45  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:13:45] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:13:45  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:13:45  config.py[line:24] INFO getResultPage:{'status': '111'}
+2018-05-14 17:13:45  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status = '111'  and  1=1  
+        
+2018-05-14 17:13:45  config.py[line:24] INFO *************************/getResultPage 请求处理完毕:操作成功*************************
+2018-05-14 17:13:45  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:13:45] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:13:46  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:13:46  config.py[line:24] INFO getResultPage:{'status': '011'}
+2018-05-14 17:13:46  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status = '011'  and  1=1  
+        
+2018-05-14 17:13:46  config.py[line:24] INFO *************************/getResultPage 请求处理完毕:操作成功*************************
+2018-05-14 17:13:46  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:13:46] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:13:47  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:13:47] "GET /result HTTP/1.1" 200 -
+2018-05-14 17:13:47  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:13:47  config.py[line:24] INFO getResultPage:{'status': '111'}
+2018-05-14 17:13:47  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status = '111'  and  1=1  
+        
+2018-05-14 17:13:47  config.py[line:24] INFO *************************/getResultPage 请求处理完毕:操作成功*************************
+2018-05-14 17:13:47  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:13:47] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:17:17  config.py[line:24] INFO 数据库初始化完成
+2018-05-14 17:17:18  _internal.py[line:88] INFO  * Running on http://0.0.0.0:9090/ (Press CTRL+C to quit)
+2018-05-14 17:17:24  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:17:24] "GET /result HTTP/1.1" 200 -
+2018-05-14 17:17:24  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:17:24] "GET /htmls/common.css HTTP/1.1" 200 -
+2018-05-14 17:17:24  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:17:24] "GET /htmls/jquery-3.3.1.js HTTP/1.1" 200 -
+2018-05-14 17:17:24  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:17:24] "GET /htmls/common.js HTTP/1.1" 200 -
+2018-05-14 17:17:25  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:17:25] "GET /result HTTP/1.1" 200 -
+2018-05-14 17:17:25  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:17:25] "GET /result HTTP/1.1" 200 -
+2018-05-14 17:17:26  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:17:26  config.py[line:24] INFO getResultPage:{'status': '101'}
+2018-05-14 17:17:26  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status = '101'  and  1=1  
+        
+2018-05-14 17:17:26  config.py[line:24] INFO *************************/getResultPage 请求处理完毕:操作成功*************************
+2018-05-14 17:17:26  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:17:26] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:17:26  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:17:26  config.py[line:24] INFO getResultPage:{'status': '111'}
+2018-05-14 17:17:26  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status = '111'  and  1=1  
+        
+2018-05-14 17:17:26  config.py[line:24] INFO *************************/getResultPage 请求处理完毕:操作成功*************************
+2018-05-14 17:17:26  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:17:26] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:17:51  config.py[line:24] INFO 数据库初始化完成
+2018-05-14 17:17:51  _internal.py[line:88] INFO  * Running on http://0.0.0.0:9090/ (Press CTRL+C to quit)
+2018-05-14 17:17:56  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:17:56] "GET /result HTTP/1.1" 200 -
+2018-05-14 17:17:56  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:17:56] "GET /htmls/common.css HTTP/1.1" 200 -
+2018-05-14 17:17:56  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:17:56] "GET /htmls/jquery-3.3.1.js HTTP/1.1" 200 -
+2018-05-14 17:17:56  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:17:56] "GET /htmls/common.js HTTP/1.1" 200 -
+2018-05-14 17:17:56  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:17:56  config.py[line:24] INFO getResultPage:{'status': '111'}
+2018-05-14 17:17:56  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status = '111'  and  1=1  
+        
+2018-05-14 17:17:56  config.py[line:24] INFO *************************/getResultPage 请求处理完毕:操作成功*************************
+2018-05-14 17:17:56  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:17:56] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:17:57  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:17:57] "GET /result HTTP/1.1" 200 -
+2018-05-14 17:17:57  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:17:57  config.py[line:24] INFO getResultPage:{'status': '111'}
+2018-05-14 17:17:57  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status = '111'  and  1=1  
+        
+2018-05-14 17:17:57  config.py[line:24] INFO *************************/getResultPage 请求处理完毕:操作成功*************************
+2018-05-14 17:17:57  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:17:57] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:17:57  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:17:57] "GET /result HTTP/1.1" 200 -
+2018-05-14 17:17:57  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:17:57  config.py[line:24] INFO getResultPage:{'status': '111'}
+2018-05-14 17:17:57  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status = '111'  and  1=1  
+        
+2018-05-14 17:17:57  config.py[line:24] INFO *************************/getResultPage 请求处理完毕:操作成功*************************
+2018-05-14 17:17:57  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:17:57] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:17:57  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:17:57] "GET /result HTTP/1.1" 200 -
+2018-05-14 17:17:57  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:17:57  config.py[line:24] INFO getResultPage:{'status': '111'}
+2018-05-14 17:17:57  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status = '111'  and  1=1  
+        
+2018-05-14 17:17:57  config.py[line:24] INFO *************************/getResultPage 请求处理完毕:操作成功*************************
+2018-05-14 17:17:57  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:17:57] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:17:58  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:17:58  config.py[line:24] INFO getResultPage:{'status': '101'}
+2018-05-14 17:17:58  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status = '101'  and  1=1  
+        
+2018-05-14 17:17:58  config.py[line:24] INFO *************************/getResultPage 请求处理完毕:操作成功*************************
+2018-05-14 17:17:58  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:17:58] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:17:58  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:17:58  config.py[line:24] INFO getResultPage:{'status': '111'}
+2018-05-14 17:17:58  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status = '111'  and  1=1  
+        
+2018-05-14 17:17:58  config.py[line:24] INFO *************************/getResultPage 请求处理完毕:操作成功*************************
+2018-05-14 17:17:58  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:17:58] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:17:59  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:17:59  config.py[line:24] INFO getResultPage:{'status': '101'}
+2018-05-14 17:17:59  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status = '101'  and  1=1  
+        
+2018-05-14 17:17:59  config.py[line:24] INFO *************************/getResultPage 请求处理完毕:操作成功*************************
+2018-05-14 17:17:59  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:17:59] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:17:59  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:17:59  config.py[line:24] INFO getResultPage:{'status': '111'}
+2018-05-14 17:17:59  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status = '111'  and  1=1  
+        
+2018-05-14 17:17:59  config.py[line:24] INFO *************************/getResultPage 请求处理完毕:操作成功*************************
+2018-05-14 17:17:59  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:17:59] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:18:00  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:18:00  config.py[line:24] INFO getResultPage:{'status': '011'}
+2018-05-14 17:18:00  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status = '011'  and  1=1  
+        
+2018-05-14 17:18:00  config.py[line:24] INFO *************************/getResultPage 请求处理完毕:操作成功*************************
+2018-05-14 17:18:00  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:18:00] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:18:00  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:18:00  config.py[line:24] INFO getResultPage:{'status': '111'}
+2018-05-14 17:18:00  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status = '111'  and  1=1  
+        
+2018-05-14 17:18:00  config.py[line:24] INFO *************************/getResultPage 请求处理完毕:操作成功*************************
+2018-05-14 17:18:00  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:18:00] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:18:22  config.py[line:24] INFO 数据库初始化完成
+2018-05-14 17:18:22  _internal.py[line:88] INFO  * Running on http://0.0.0.0:9090/ (Press CTRL+C to quit)
+2018-05-14 17:18:31  config.py[line:24] INFO *************************收到访问请求: /*************************
+2018-05-14 17:18:31  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  
+        
+2018-05-14 17:18:31  config.py[line:24] INFO 数据总量：20557
+2018-05-14 17:18:31  config.py[line:24] INFO *************************/ 请求处理完毕*************************
+2018-05-14 17:18:31  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:18:31] "GET / HTTP/1.1" 200 -
+2018-05-14 17:18:31  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:18:31  config.py[line:24] INFO getResultPage:{'status': '000'}
+2018-05-14 17:18:31  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:18:31] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:18:32  config.py[line:24] INFO *************************收到访问请求: /items/1*************************
+2018-05-14 17:18:32  config.py[line:24] INFO 数据库分页查询sql: 
+
+            SELECT * FROM items_test  ORDER BY good_id LIMIT 20 OFFSET 0 * 20
+        
+2018-05-14 17:18:33  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:18:33] "GET /items/1 HTTP/1.1" 200 -
+2018-05-14 17:18:33  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:18:33  config.py[line:24] INFO getResultPage:{'status': '000'}
+2018-05-14 17:18:33  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:18:33] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:19:31  config.py[line:24] INFO *************************接到请求: /uploadImg*************************
+2018-05-14 17:19:31  config.py[line:24] INFO upload_img:{'good_id': '0', 'good_name': '梦幻香皂125g', 'good_upc': '6901043810042', 'good_first': '美妆/洗护', 'good_second': '洗浴用品', 'good_third': '浴盐/香皂', 'good_desc': '梦幻', 'good_price': '0.0', 'good_p': '安徽省邮政公司', 'good_c': '池州市邮政公司', 'good_x': '石台县邮政公司', 'img_front': 'http://www.0372jsy.com/images/upload/Image/5901%283%29.jpg', 'img_side': 'http://www.5588.tv/Img/Img2011/2012-5-17/2013105145338200.jpg'}
+2018-05-14 17:19:31  config.py[line:24] INFO *************************结束请求*************************
+2018-05-14 17:19:31  config.py[line:24] INFO 
+
+2018-05-14 17:19:31  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:19:31] "POST /uploadImg HTTP/1.1" 200 -
+2018-05-14 17:19:31  config.py[line:24] INFO 在数据库中查到商品信息:good_name: 梦幻香皂125g, good_upc:6901043810042, status: 000
+2018-05-14 17:19:31  config.py[line:24] INFO 开始下载图片：upc:6901043810042, 图片类型：正面， 链接：http://www.0372jsy.com/images/upload/Image/5901%283%29.jpg
+2018-05-14 17:19:31  connectionpool.py[line:208] DEBUG Starting new HTTP connection (1): www.0372jsy.com
+2018-05-14 17:19:31  connectionpool.py[line:396] DEBUG http://www.0372jsy.com:80 "GET /images/upload/Image/5901%283%29.jpg HTTP/1.1" 200 40965
+2018-05-14 17:19:32  config.py[line:24] INFO 图片下载成功：upc:6901043810042, 图片类型：正面， 链接：http://www.0372jsy.com/images/upload/Image/5901%283%29.jpg
+2018-05-14 17:19:32  config.py[line:24] INFO 开始下载图片：upc:6901043810042, 图片类型：侧面， 链接：http://www.5588.tv/Img/Img2011/2012-5-17/2013105145338200.jpg
+2018-05-14 17:19:32  connectionpool.py[line:208] DEBUG Starting new HTTP connection (1): www.5588.tv
+2018-05-14 17:19:32  connectionpool.py[line:396] DEBUG http://www.5588.tv:80 "GET /Img/Img2011/2012-5-17/2013105145338200.jpg HTTP/1.1" 200 19211
+2018-05-14 17:19:32  config.py[line:24] INFO 图片下载成功：upc:6901043810042, 图片类型：侧面， 链接：http://www.5588.tv/Img/Img2011/2012-5-17/2013105145338200.jpg
+2018-05-14 17:19:32  config.py[line:24] INFO 待保存的商品信息：<webService.src.db.dbhelper.GoodItem object at 0x04202F70>
+2018-05-14 17:19:32  config.py[line:24] INFO 数据库更新商品sql: 
+
+            UPDATE items_test SET img_front = 'http://www.0372jsy.com/images/upload/Image/5901%283%29.jpg', img_side = 'http://www.5588.tv/Img/Img2011/2012-5-17/2013105145338200.jpg', img_obverse = 'None', status = '110', img_front_local = '6901043810042_100.jpg', 
+            img_side_local = '6901043810042_010.jpg', img_obverse_local = 'None' where good_id = 0
+        
+2018-05-14 17:19:32  config.py[line:24] INFO 数据库更新商品成功：商品名：梦幻香皂125g, upc: 6901043810042, 状态：110
+2018-05-14 17:19:37  config.py[line:24] INFO *************************接到请求: /uploadImg*************************
+2018-05-14 17:19:37  config.py[line:24] INFO upload_img:{'good_id': '1', 'good_name': '古井贡酒年份原浆酒献礼40.6度500ml', 'good_upc': '6902018770484', 'good_first': '特色美食', 'good_second': '酒类', 'good_third': '白酒', 'good_desc': '古井', 'good_price': '6.0', 'good_p': '安徽省邮政公司', 'good_c': '池州市邮政公司', 'good_x': '石台县邮政公司', 'img_front': 'http://img11.360buyimg.com/n7/g15/M03/14/1F/rBEhWFNGYKEIAAAAAAKjbqTv4rgAALjjwFnGg0AAqOG680.jpg', 'img_side': 'http://img.11665.com/img03_p/i3/T1ccYSXetqXXagOjw4_053445.jpg', 'img_obverse': 'http://img10.360buyimg.com/popWaterMark/jfs/t739/102/7397936/88031/d57bb6d2/547c238cN56f375b1.jpg'}
+2018-05-14 17:19:37  config.py[line:24] INFO *************************结束请求*************************
+2018-05-14 17:19:37  config.py[line:24] INFO 
+
+2018-05-14 17:19:37  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:19:37] "POST /uploadImg HTTP/1.1" 200 -
+2018-05-14 17:19:37  config.py[line:24] INFO 在数据库中查到商品信息:good_name: 古井贡酒年份原浆酒献礼40.6度500ml, good_upc:6902018770484, status: 000
+2018-05-14 17:19:37  config.py[line:24] INFO 开始下载图片：upc:6902018770484, 图片类型：正面， 链接：http://img11.360buyimg.com/n7/g15/M03/14/1F/rBEhWFNGYKEIAAAAAAKjbqTv4rgAALjjwFnGg0AAqOG680.jpg
+2018-05-14 17:19:37  connectionpool.py[line:208] DEBUG Starting new HTTP connection (1): img11.360buyimg.com
+2018-05-14 17:19:37  connectionpool.py[line:396] DEBUG http://img11.360buyimg.com:80 "GET /n7/g15/M03/14/1F/rBEhWFNGYKEIAAAAAAKjbqTv4rgAALjjwFnGg0AAqOG680.jpg HTTP/1.1" 200 22243
+2018-05-14 17:19:37  config.py[line:24] INFO 图片下载成功：upc:6902018770484, 图片类型：正面， 链接：http://img11.360buyimg.com/n7/g15/M03/14/1F/rBEhWFNGYKEIAAAAAAKjbqTv4rgAALjjwFnGg0AAqOG680.jpg
+2018-05-14 17:19:37  config.py[line:24] INFO 开始下载图片：upc:6902018770484, 图片类型：侧面， 链接：http://img.11665.com/img03_p/i3/T1ccYSXetqXXagOjw4_053445.jpg
+2018-05-14 17:19:37  connectionpool.py[line:208] DEBUG Starting new HTTP connection (1): img.11665.com
+2018-05-14 17:19:38  connectionpool.py[line:396] DEBUG http://img.11665.com:80 "GET /img03_p/i3/T1ccYSXetqXXagOjw4_053445.jpg HTTP/1.1" 302 170
+2018-05-14 17:19:38  connectionpool.py[line:208] DEBUG Starting new HTTP connection (1): img03.taobaocdn.com
+2018-05-14 17:19:38  connectionpool.py[line:396] DEBUG http://img03.taobaocdn.com:80 "GET /bao/uploaded/i3/T1ccYSXetqXXagOjw4_053445.jpg HTTP/1.1" 200 154364
+2018-05-14 17:19:38  config.py[line:24] INFO 图片下载成功：upc:6902018770484, 图片类型：侧面， 链接：http://img.11665.com/img03_p/i3/T1ccYSXetqXXagOjw4_053445.jpg
+2018-05-14 17:19:38  config.py[line:24] INFO 开始下载图片：upc:6902018770484, 图片类型：反面， 链接：http://img10.360buyimg.com/popWaterMark/jfs/t739/102/7397936/88031/d57bb6d2/547c238cN56f375b1.jpg
+2018-05-14 17:19:38  connectionpool.py[line:208] DEBUG Starting new HTTP connection (1): img10.360buyimg.com
+2018-05-14 17:19:38  connectionpool.py[line:396] DEBUG http://img10.360buyimg.com:80 "GET /popWaterMark/jfs/t739/102/7397936/88031/d57bb6d2/547c238cN56f375b1.jpg HTTP/1.1" 200 88031
+2018-05-14 17:19:38  config.py[line:24] INFO 图片下载成功：upc:6902018770484, 图片类型：反面， 链接：http://img10.360buyimg.com/popWaterMark/jfs/t739/102/7397936/88031/d57bb6d2/547c238cN56f375b1.jpg
+2018-05-14 17:19:38  config.py[line:24] INFO 待保存的商品信息：<webService.src.db.dbhelper.GoodItem object at 0x041B1470>
+2018-05-14 17:19:38  config.py[line:24] INFO 数据库更新商品sql: 
+
+            UPDATE items_test SET img_front = 'http://img11.360buyimg.com/n7/g15/M03/14/1F/rBEhWFNGYKEIAAAAAAKjbqTv4rgAALjjwFnGg0AAqOG680.jpg', img_side = 'http://img.11665.com/img03_p/i3/T1ccYSXetqXXagOjw4_053445.jpg', img_obverse = 'http://img10.360buyimg.com/popWaterMark/jfs/t739/102/7397936/88031/d57bb6d2/547c238cN56f375b1.jpg', status = '111', img_front_local = '6902018770484_100.jpg', 
+            img_side_local = '6902018770484_010.jpg', img_obverse_local = '6902018770484_001.jpg' where good_id = 1
+        
+2018-05-14 17:19:38  config.py[line:24] INFO 数据库更新商品成功：商品名：古井贡酒年份原浆酒献礼40.6度500ml, upc: 6902018770484, 状态：111
+2018-05-14 17:19:41  config.py[line:24] INFO *************************收到访问请求: /*************************
+2018-05-14 17:19:41  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  
+        
+2018-05-14 17:19:41  config.py[line:24] INFO 数据总量：20557
+2018-05-14 17:19:41  config.py[line:24] INFO *************************/ 请求处理完毕*************************
+2018-05-14 17:19:41  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:19:41] "GET / HTTP/1.1" 200 -
+2018-05-14 17:19:42  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:19:42  config.py[line:24] INFO getResultPage:{'status': '000'}
+2018-05-14 17:19:42  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:19:42] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:19:43  config.py[line:24] INFO *************************收到访问请求: /items/1*************************
+2018-05-14 17:19:43  config.py[line:24] INFO 数据库分页查询sql: 
+
+            SELECT * FROM items_test  ORDER BY good_id LIMIT 20 OFFSET 0 * 20
+        
+2018-05-14 17:19:43  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:19:43] "GET /items/1 HTTP/1.1" 200 -
+2018-05-14 17:19:43  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:19:43  config.py[line:24] INFO getResultPage:{'status': '000'}
+2018-05-14 17:19:43  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:19:43] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:19:48  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:19:48] "GET /result HTTP/1.1" 200 -
+2018-05-14 17:19:48  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:19:48  config.py[line:24] INFO getResultPage:{'status': '111'}
+2018-05-14 17:19:48  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status = '111'  and  1=1  
+        
+2018-05-14 17:19:48  config.py[line:24] INFO *************************/getResultPage 请求处理完毕:操作成功*************************
+2018-05-14 17:19:48  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:19:48] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:19:49  config.py[line:24] INFO *************************收到访问请求: /resultList*************************
+2018-05-14 17:19:49  config.py[line:24] INFO resultList:{'status': '111', 'page': '1'}
+2018-05-14 17:19:49  config.py[line:24] INFO 数据库分页查询sql: 
+
+            SELECT * FROM items_test  where  status='111'  and  1=1  ORDER BY good_id LIMIT 20 OFFSET 0 * 20
+        
+2018-05-14 17:19:49  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:19:49] "GET /resultList?status=111&page=1 HTTP/1.1" 200 -
+2018-05-14 17:19:49  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:19:49] "GET /imgs/6902018770484_100.jpg HTTP/1.1" 200 -
+2018-05-14 17:19:49  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:19:49] "GET /imgs/6902018770484_010.jpg HTTP/1.1" 200 -
+2018-05-14 17:19:49  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:19:49] "GET /imgs/6902018770484_001.jpg HTTP/1.1" 200 -
+2018-05-14 17:19:49  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:19:49  config.py[line:24] INFO getResultPage:{'status': '000'}
+2018-05-14 17:19:49  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:19:49] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:19:53  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:19:53  config.py[line:24] INFO getResultPage:{'status': '110'}
+2018-05-14 17:19:53  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status = '110'  and  1=1  
+        
+2018-05-14 17:19:53  config.py[line:24] INFO *************************/getResultPage 请求处理完毕:操作成功*************************
+2018-05-14 17:19:53  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:19:53] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:19:54  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:19:54  config.py[line:24] INFO getResultPage:{'status': '100'}
+2018-05-14 17:19:54  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status = '100'  and  1=1  
+        
+2018-05-14 17:19:54  config.py[line:24] INFO *************************/getResultPage 请求处理完毕:操作成功*************************
+2018-05-14 17:19:54  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:19:54] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:19:56  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:19:56  config.py[line:24] INFO getResultPage:{'status': '110'}
+2018-05-14 17:19:56  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status = '110'  and  1=1  
+        
+2018-05-14 17:19:56  config.py[line:24] INFO *************************/getResultPage 请求处理完毕:操作成功*************************
+2018-05-14 17:19:56  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:19:56] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:19:57  config.py[line:24] INFO *************************收到访问请求: /resultList*************************
+2018-05-14 17:19:57  config.py[line:24] INFO resultList:{'status': '110', 'page': '1'}
+2018-05-14 17:19:57  config.py[line:24] INFO 数据库分页查询sql: 
+
+            SELECT * FROM items_test  where  status='110'  and  1=1  ORDER BY good_id LIMIT 20 OFFSET 0 * 20
+        
+2018-05-14 17:19:57  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:19:57] "GET /resultList?status=110&page=1 HTTP/1.1" 200 -
+2018-05-14 17:19:57  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:19:57] "GET /imgs/6901043810042_100.jpg HTTP/1.1" 200 -
+2018-05-14 17:19:57  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:19:57] "GET /imgs/6901043810042_010.jpg HTTP/1.1" 200 -
+2018-05-14 17:19:57  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:19:57  config.py[line:24] INFO getResultPage:{'status': '000'}
+2018-05-14 17:19:57  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:19:57] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:20:01  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:20:01  config.py[line:24] INFO getResultPage:{'status': '100'}
+2018-05-14 17:20:01  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status = '100'  and  1=1  
+        
+2018-05-14 17:20:01  config.py[line:24] INFO *************************/getResultPage 请求处理完毕:操作成功*************************
+2018-05-14 17:20:01  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:20:01] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:20:09  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:20:09  config.py[line:24] INFO getResultPage:{'status': '000'}
+2018-05-14 17:20:09  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:20:09] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:20:10  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:20:10  config.py[line:24] INFO getResultPage:{'status': '001'}
+2018-05-14 17:20:10  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status = '001'  and  1=1  
+        
+2018-05-14 17:20:10  config.py[line:24] INFO *************************/getResultPage 请求处理完毕:操作成功*************************
+2018-05-14 17:20:10  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:20:10] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:20:12  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:20:12  config.py[line:24] INFO getResultPage:{'status': '101'}
+2018-05-14 17:20:12  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status = '101'  and  1=1  
+        
+2018-05-14 17:20:12  config.py[line:24] INFO *************************/getResultPage 请求处理完毕:操作成功*************************
+2018-05-14 17:20:12  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:20:12] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:20:13  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:20:13  config.py[line:24] INFO getResultPage:{'status': '100'}
+2018-05-14 17:20:13  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status = '100'  and  1=1  
+        
+2018-05-14 17:20:13  config.py[line:24] INFO *************************/getResultPage 请求处理完毕:操作成功*************************
+2018-05-14 17:20:13  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:20:13] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:20:14  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:20:14  config.py[line:24] INFO getResultPage:{'status': '110'}
+2018-05-14 17:20:14  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status = '110'  and  1=1  
+        
+2018-05-14 17:20:14  config.py[line:24] INFO *************************/getResultPage 请求处理完毕:操作成功*************************
+2018-05-14 17:20:14  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:20:14] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:20:15  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:20:15  config.py[line:24] INFO getResultPage:{'status': '111'}
+2018-05-14 17:20:15  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status = '111'  and  1=1  
+        
+2018-05-14 17:20:15  config.py[line:24] INFO *************************/getResultPage 请求处理完毕:操作成功*************************
+2018-05-14 17:20:15  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:20:15] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:20:15  config.py[line:24] INFO *************************收到访问请求: /resultList*************************
+2018-05-14 17:20:15  config.py[line:24] INFO resultList:{'status': '111', 'page': '1'}
+2018-05-14 17:20:15  config.py[line:24] INFO 数据库分页查询sql: 
+
+            SELECT * FROM items_test  where  status='111'  and  1=1  ORDER BY good_id LIMIT 20 OFFSET 0 * 20
+        
+2018-05-14 17:20:15  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:20:15] "GET /resultList?status=111&page=1 HTTP/1.1" 200 -
+2018-05-14 17:20:15  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:20:15  config.py[line:24] INFO getResultPage:{'status': '000'}
+2018-05-14 17:20:15  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:20:15] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:20:18  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:20:18  config.py[line:24] INFO getResultPage:{'status': '110'}
+2018-05-14 17:20:18  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status = '110'  and  1=1  
+        
+2018-05-14 17:20:19  config.py[line:24] INFO *************************/getResultPage 请求处理完毕:操作成功*************************
+2018-05-14 17:20:19  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:20:19] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:20:19  config.py[line:24] INFO *************************收到访问请求: /resultList*************************
+2018-05-14 17:20:19  config.py[line:24] INFO resultList:{'status': '110', 'page': '1'}
+2018-05-14 17:20:19  config.py[line:24] INFO 数据库分页查询sql: 
+
+            SELECT * FROM items_test  where  status='110'  and  1=1  ORDER BY good_id LIMIT 20 OFFSET 0 * 20
+        
+2018-05-14 17:20:19  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:20:19] "GET /resultList?status=110&page=1 HTTP/1.1" 200 -
+2018-05-14 17:20:19  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:20:19  config.py[line:24] INFO getResultPage:{'status': '000'}
+2018-05-14 17:20:19  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:20:19] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:21:54  config.py[line:24] INFO 数据库初始化完成
+2018-05-14 17:21:54  _internal.py[line:88] INFO  * Running on http://0.0.0.0:9090/ (Press CTRL+C to quit)
+2018-05-14 17:21:57  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:21:57] "GET /result HTTP/1.1" 200 -
+2018-05-14 17:21:57  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:21:57  config.py[line:24] INFO getResultPage:{'status': '111'}
+2018-05-14 17:21:57  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status like '111'  and  1=1  
+        
+2018-05-14 17:21:57  config.py[line:24] INFO *************************/getResultPage 请求处理完毕:操作成功*************************
+2018-05-14 17:21:57  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:21:57] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:21:58  config.py[line:24] INFO *************************收到访问请求: /resultList*************************
+2018-05-14 17:21:58  config.py[line:24] INFO resultList:{'status': '111', 'page': '1'}
+2018-05-14 17:21:58  config.py[line:24] INFO 数据库分页查询sql: 
+
+            SELECT * FROM items_test  where  status='111'  and  1=1  ORDER BY good_id LIMIT 20 OFFSET 0 * 20
+        
+2018-05-14 17:21:58  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:21:58] "GET /resultList?status=111&page=1 HTTP/1.1" 200 -
+2018-05-14 17:21:58  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:21:58  config.py[line:24] INFO getResultPage:{'status': '000'}
+2018-05-14 17:21:58  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:21:58] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:22:00  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:22:00  config.py[line:24] INFO getResultPage:{'status': '101'}
+2018-05-14 17:22:00  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status like '1_1'  and  1=1  
+        
+2018-05-14 17:22:00  config.py[line:24] INFO *************************/getResultPage 请求处理完毕:操作成功*************************
+2018-05-14 17:22:00  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:22:00] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:22:00  config.py[line:24] INFO *************************收到访问请求: /resultList*************************
+2018-05-14 17:22:00  config.py[line:24] INFO resultList:{'status': '101', 'page': '1'}
+2018-05-14 17:22:00  config.py[line:24] INFO 数据库分页查询sql: 
+
+            SELECT * FROM items_test  where  status='101'  and  1=1  ORDER BY good_id LIMIT 20 OFFSET 0 * 20
+        
+2018-05-14 17:22:00  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:22:00] "GET /resultList?status=101&page=1 HTTP/1.1" 200 -
+2018-05-14 17:22:00  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:22:00  config.py[line:24] INFO getResultPage:{'status': '000'}
+2018-05-14 17:22:00  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:22:00] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:22:01  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:22:01  config.py[line:24] INFO getResultPage:{'status': '100'}
+2018-05-14 17:22:01  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status like '1__'  and  1=1  
+        
+2018-05-14 17:22:01  config.py[line:24] INFO *************************/getResultPage 请求处理完毕:操作成功*************************
+2018-05-14 17:22:01  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:22:01] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:22:02  config.py[line:24] INFO *************************收到访问请求: /resultList*************************
+2018-05-14 17:22:02  config.py[line:24] INFO resultList:{'status': '100', 'page': '1'}
+2018-05-14 17:22:02  config.py[line:24] INFO 数据库分页查询sql: 
+
+            SELECT * FROM items_test  where  status='100'  and  1=1  ORDER BY good_id LIMIT 20 OFFSET 0 * 20
+        
+2018-05-14 17:22:02  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:22:02] "GET /resultList?status=100&page=1 HTTP/1.1" 200 -
+2018-05-14 17:22:02  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:22:02  config.py[line:24] INFO getResultPage:{'status': '000'}
+2018-05-14 17:22:02  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:22:02] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:22:05  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:22:05  config.py[line:24] INFO getResultPage:{'status': '110'}
+2018-05-14 17:22:05  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status like '11_'  and  1=1  
+        
+2018-05-14 17:22:05  config.py[line:24] INFO *************************/getResultPage 请求处理完毕:操作成功*************************
+2018-05-14 17:22:05  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:22:05] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:22:05  config.py[line:24] INFO *************************收到访问请求: /resultList*************************
+2018-05-14 17:22:05  config.py[line:24] INFO resultList:{'status': '110', 'page': '1'}
+2018-05-14 17:22:05  config.py[line:24] INFO 数据库分页查询sql: 
+
+            SELECT * FROM items_test  where  status='110'  and  1=1  ORDER BY good_id LIMIT 20 OFFSET 0 * 20
+        
+2018-05-14 17:22:05  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:22:05] "GET /resultList?status=110&page=1 HTTP/1.1" 200 -
+2018-05-14 17:22:05  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:22:05  config.py[line:24] INFO getResultPage:{'status': '000'}
+2018-05-14 17:22:05  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:22:05] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:22:15  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:22:15] "GET /result HTTP/1.1" 200 -
+2018-05-14 17:22:15  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:22:15] "GET /htmls/jquery-3.3.1.js HTTP/1.1" 200 -
+2018-05-14 17:22:15  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:22:15] "GET /htmls/common.css HTTP/1.1" 200 -
+2018-05-14 17:22:15  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:22:15] "GET /htmls/common.js HTTP/1.1" 200 -
+2018-05-14 17:22:15  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:22:15  config.py[line:24] INFO getResultPage:{'status': '111'}
+2018-05-14 17:22:15  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status like '111'  and  1=1  
+        
+2018-05-14 17:22:15  config.py[line:24] INFO *************************/getResultPage 请求处理完毕:操作成功*************************
+2018-05-14 17:22:15  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:22:15] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:22:16  config.py[line:24] INFO *************************收到访问请求: /resultList*************************
+2018-05-14 17:22:16  config.py[line:24] INFO resultList:{'status': '111', 'page': '1'}
+2018-05-14 17:22:16  config.py[line:24] INFO 数据库分页查询sql: 
+
+            SELECT * FROM items_test  where  status='111'  and  1=1  ORDER BY good_id LIMIT 20 OFFSET 0 * 20
+        
+2018-05-14 17:22:16  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:22:16] "GET /resultList?status=111&page=1 HTTP/1.1" 200 -
+2018-05-14 17:22:16  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:22:16] "GET /imgs/6902018770484_100.jpg HTTP/1.1" 200 -
+2018-05-14 17:22:16  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:22:16] "GET /imgs/6902018770484_010.jpg HTTP/1.1" 200 -
+2018-05-14 17:22:16  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:22:16] "GET /imgs/6902018770484_001.jpg HTTP/1.1" 200 -
+2018-05-14 17:22:16  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:22:16  config.py[line:24] INFO getResultPage:{'status': '000'}
+2018-05-14 17:22:16  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:22:16] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:22:18  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:22:18  config.py[line:24] INFO getResultPage:{'status': '110'}
+2018-05-14 17:22:18  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status like '11_'  and  1=1  
+        
+2018-05-14 17:22:18  config.py[line:24] INFO *************************/getResultPage 请求处理完毕:操作成功*************************
+2018-05-14 17:22:18  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:22:18] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:22:18  config.py[line:24] INFO *************************收到访问请求: /resultList*************************
+2018-05-14 17:22:18  config.py[line:24] INFO resultList:{'status': '110', 'page': '1'}
+2018-05-14 17:22:18  config.py[line:24] INFO 数据库分页查询sql: 
+
+            SELECT * FROM items_test  where  status='110'  and  1=1  ORDER BY good_id LIMIT 20 OFFSET 0 * 20
+        
+2018-05-14 17:22:18  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:22:18] "GET /resultList?status=110&page=1 HTTP/1.1" 200 -
+2018-05-14 17:22:18  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:22:18] "GET /imgs/6901043810042_010.jpg HTTP/1.1" 200 -
+2018-05-14 17:22:18  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:22:18] "GET /imgs/6901043810042_100.jpg HTTP/1.1" 200 -
+2018-05-14 17:22:18  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:22:18  config.py[line:24] INFO getResultPage:{'status': '000'}
+2018-05-14 17:22:18  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:22:18] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:22:20  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:22:20  config.py[line:24] INFO getResultPage:{'status': '100'}
+2018-05-14 17:22:20  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status like '1__'  and  1=1  
+        
+2018-05-14 17:22:20  config.py[line:24] INFO *************************/getResultPage 请求处理完毕:操作成功*************************
+2018-05-14 17:22:20  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:22:20] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:22:20  config.py[line:24] INFO *************************收到访问请求: /resultList*************************
+2018-05-14 17:22:20  config.py[line:24] INFO resultList:{'status': '100', 'page': '1'}
+2018-05-14 17:22:20  config.py[line:24] INFO 数据库分页查询sql: 
+
+            SELECT * FROM items_test  where  status='100'  and  1=1  ORDER BY good_id LIMIT 20 OFFSET 0 * 20
+        
+2018-05-14 17:22:21  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:22:21] "GET /resultList?status=100&page=1 HTTP/1.1" 200 -
+2018-05-14 17:22:21  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:22:21  config.py[line:24] INFO getResultPage:{'status': '000'}
+2018-05-14 17:22:21  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:22:21] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:25:06  config.py[line:24] INFO 数据库初始化完成
+2018-05-14 17:25:06  _internal.py[line:88] INFO  * Running on http://0.0.0.0:9090/ (Press CTRL+C to quit)
+2018-05-14 17:25:12  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:25:12] "GET /result HTTP/1.1" 200 -
+2018-05-14 17:25:12  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:25:12] "GET /htmls/jquery-3.3.1.js HTTP/1.1" 200 -
+2018-05-14 17:25:12  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:25:12] "GET /htmls/common.js HTTP/1.1" 200 -
+2018-05-14 17:25:12  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:25:12] "GET /htmls/common.css HTTP/1.1" 200 -
+2018-05-14 17:25:13  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:25:13  config.py[line:24] INFO getResultPage:{'status': '111'}
+2018-05-14 17:25:13  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status like '111'  and  1=1  
+        
+2018-05-14 17:25:13  config.py[line:24] INFO *************************/getResultPage 请求处理完毕:操作成功*************************
+2018-05-14 17:25:13  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:25:13] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:25:13  config.py[line:24] INFO *************************收到访问请求: /resultList*************************
+2018-05-14 17:25:13  config.py[line:24] INFO resultList:{'status': '111', 'page': '1'}
+2018-05-14 17:25:13  config.py[line:24] INFO 数据库分页查询sql: 
+
+            SELECT * FROM items_test  where  status='111'  and  1=1  ORDER BY good_id LIMIT 20 OFFSET 0 * 20
+        
+2018-05-14 17:25:14  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:25:14] "GET /resultList?status=111&page=1 HTTP/1.1" 200 -
+2018-05-14 17:25:14  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:25:14] "GET /imgs/6902018770484_100.jpg HTTP/1.1" 200 -
+2018-05-14 17:25:14  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:25:14] "GET /imgs/6902018770484_010.jpg HTTP/1.1" 200 -
+2018-05-14 17:25:14  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:25:14] "GET /imgs/6902018770484_001.jpg HTTP/1.1" 200 -
+2018-05-14 17:25:14  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:25:14  config.py[line:24] INFO getResultPage:{'status': '000'}
+2018-05-14 17:25:14  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:25:14] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:25:15  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:25:15  config.py[line:24] INFO getResultPage:{'status': '110'}
+2018-05-14 17:25:15  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status like '11_'  and  1=1  
+        
+2018-05-14 17:25:15  config.py[line:24] INFO *************************/getResultPage 请求处理完毕:操作成功*************************
+2018-05-14 17:25:15  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:25:15] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:25:15  config.py[line:24] INFO *************************收到访问请求: /resultList*************************
+2018-05-14 17:25:15  config.py[line:24] INFO resultList:{'status': '110', 'page': '1'}
+2018-05-14 17:25:15  config.py[line:24] INFO 数据库分页查询sql: 
+
+            SELECT * FROM items_test  where  status='11_'  and  1=1  ORDER BY good_id LIMIT 20 OFFSET 0 * 20
+        
+2018-05-14 17:25:15  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:25:15] "GET /resultList?status=110&page=1 HTTP/1.1" 200 -
+2018-05-14 17:25:15  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:25:15  config.py[line:24] INFO getResultPage:{'status': '000'}
+2018-05-14 17:25:15  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:25:15] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:25:17  config.py[line:24] INFO *************************收到访问请求: /resultList*************************
+2018-05-14 17:25:17  config.py[line:24] INFO resultList:{'status': '110', 'page': '1'}
+2018-05-14 17:25:17  config.py[line:24] INFO 数据库分页查询sql: 
+
+            SELECT * FROM items_test  where  status='11_'  and  1=1  ORDER BY good_id LIMIT 20 OFFSET 0 * 20
+        
+2018-05-14 17:25:17  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:25:17] "GET /resultList?status=110&page=1 HTTP/1.1" 200 -
+2018-05-14 17:25:17  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:25:17  config.py[line:24] INFO getResultPage:{'status': '000'}
+2018-05-14 17:25:17  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:25:17] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:25:33  config.py[line:24] INFO 数据库初始化完成
+2018-05-14 17:25:34  _internal.py[line:88] INFO  * Running on http://0.0.0.0:9090/ (Press CTRL+C to quit)
+2018-05-14 17:25:39  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:25:39] "GET /result HTTP/1.1" 200 -
+2018-05-14 17:25:39  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:25:39] "GET /htmls/jquery-3.3.1.js HTTP/1.1" 200 -
+2018-05-14 17:25:39  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:25:39] "GET /htmls/common.css HTTP/1.1" 200 -
+2018-05-14 17:25:39  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:25:39] "GET /htmls/common.js HTTP/1.1" 200 -
+2018-05-14 17:25:39  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:25:39  config.py[line:24] INFO getResultPage:{'status': '111'}
+2018-05-14 17:25:39  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status like '111'  and  1=1  
+        
+2018-05-14 17:25:39  config.py[line:24] INFO *************************/getResultPage 请求处理完毕:操作成功*************************
+2018-05-14 17:25:39  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:25:39] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:25:41  config.py[line:24] INFO *************************收到访问请求: /resultList*************************
+2018-05-14 17:25:41  config.py[line:24] INFO resultList:{'status': '111', 'page': '1'}
+2018-05-14 17:25:41  config.py[line:24] INFO 数据库分页查询sql: 
+
+            SELECT * FROM items_test  where  status like '111'  and  1=1  ORDER BY good_id LIMIT 20 OFFSET 0 * 20
+        
+2018-05-14 17:25:41  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:25:41] "GET /resultList?status=111&page=1 HTTP/1.1" 200 -
+2018-05-14 17:25:41  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:25:41] "GET /imgs/6902018770484_100.jpg HTTP/1.1" 200 -
+2018-05-14 17:25:41  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:25:41] "GET /imgs/6902018770484_010.jpg HTTP/1.1" 200 -
+2018-05-14 17:25:41  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:25:41] "GET /imgs/6902018770484_001.jpg HTTP/1.1" 200 -
+2018-05-14 17:25:41  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:25:41  config.py[line:24] INFO getResultPage:{'status': '000'}
+2018-05-14 17:25:41  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:25:41] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:25:42  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:25:42  config.py[line:24] INFO getResultPage:{'status': '110'}
+2018-05-14 17:25:42  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status like '11_'  and  1=1  
+        
+2018-05-14 17:25:42  config.py[line:24] INFO *************************/getResultPage 请求处理完毕:操作成功*************************
+2018-05-14 17:25:42  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:25:42] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:25:42  config.py[line:24] INFO *************************收到访问请求: /resultList*************************
+2018-05-14 17:25:42  config.py[line:24] INFO resultList:{'status': '110', 'page': '1'}
+2018-05-14 17:25:42  config.py[line:24] INFO 数据库分页查询sql: 
+
+            SELECT * FROM items_test  where  status like '11_'  and  1=1  ORDER BY good_id LIMIT 20 OFFSET 0 * 20
+        
+2018-05-14 17:25:42  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:25:42] "GET /resultList?status=110&page=1 HTTP/1.1" 200 -
+2018-05-14 17:25:42  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:25:42] "GET /imgs/6901043810042_100.jpg HTTP/1.1" 200 -
+2018-05-14 17:25:42  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:25:42] "GET /imgs/6901043810042_010.jpg HTTP/1.1" 200 -
+2018-05-14 17:25:42  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:25:42  config.py[line:24] INFO getResultPage:{'status': '000'}
+2018-05-14 17:25:42  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:25:42] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:25:45  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:25:45  config.py[line:24] INFO getResultPage:{'status': '100'}
+2018-05-14 17:25:45  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status like '1__'  and  1=1  
+        
+2018-05-14 17:25:45  config.py[line:24] INFO *************************/getResultPage 请求处理完毕:操作成功*************************
+2018-05-14 17:25:45  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:25:45] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:25:45  config.py[line:24] INFO *************************收到访问请求: /resultList*************************
+2018-05-14 17:25:45  config.py[line:24] INFO resultList:{'status': '100', 'page': '1'}
+2018-05-14 17:25:45  config.py[line:24] INFO 数据库分页查询sql: 
+
+            SELECT * FROM items_test  where  status like '1__'  and  1=1  ORDER BY good_id LIMIT 20 OFFSET 0 * 20
+        
+2018-05-14 17:25:45  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:25:45] "GET /resultList?status=100&page=1 HTTP/1.1" 200 -
+2018-05-14 17:25:45  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:25:45  config.py[line:24] INFO getResultPage:{'status': '000'}
+2018-05-14 17:25:45  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:25:45] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:25:48  config.py[line:24] INFO *************************收到访问请求: /*************************
+2018-05-14 17:25:48  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  
+        
+2018-05-14 17:25:48  config.py[line:24] INFO 数据总量：20557
+2018-05-14 17:25:48  config.py[line:24] INFO *************************/ 请求处理完毕*************************
+2018-05-14 17:25:48  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:25:48] "GET / HTTP/1.1" 200 -
+2018-05-14 17:25:49  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:25:49  config.py[line:24] INFO getResultPage:{'status': '000'}
+2018-05-14 17:25:49  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:25:49] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:25:50  config.py[line:24] INFO *************************收到访问请求: /items/1*************************
+2018-05-14 17:25:50  config.py[line:24] INFO 数据库分页查询sql: 
+
+            SELECT * FROM items_test  ORDER BY good_id LIMIT 20 OFFSET 0 * 20
+        
+2018-05-14 17:25:50  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:25:50] "GET /items/1 HTTP/1.1" 200 -
+2018-05-14 17:25:50  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:25:50  config.py[line:24] INFO getResultPage:{'status': '000'}
+2018-05-14 17:25:50  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:25:50] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:27:35  config.py[line:24] INFO 数据库初始化完成
+2018-05-14 17:27:35  _internal.py[line:88] INFO  * Running on http://0.0.0.0:9090/ (Press CTRL+C to quit)
+2018-05-14 17:27:38  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:27:38] "GET /result HTTP/1.1" 200 -
+2018-05-14 17:27:38  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:27:38  config.py[line:24] INFO getResultPage:{'status': '111'}
+2018-05-14 17:27:38  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status like '111'  and  1=1  
+        
+2018-05-14 17:27:38  config.py[line:24] INFO *************************/getResultPage 请求处理完毕:操作成功*************************
+2018-05-14 17:27:38  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:27:38] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:27:41  config.py[line:24] INFO *************************收到访问请求: /resultList*************************
+2018-05-14 17:27:41  config.py[line:24] INFO resultList:{'status': '111', 'page': '1'}
+2018-05-14 17:27:41  config.py[line:24] INFO 数据库分页查询sql: 
+
+            SELECT * FROM items_test  where  status like '111'  and  1=1  ORDER BY good_id LIMIT 20 OFFSET 0 * 20
+        
+2018-05-14 17:27:41  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:27:41] "GET /resultList?status=111&page=1 HTTP/1.1" 200 -
+2018-05-14 17:27:41  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:27:41  config.py[line:24] INFO getResultPage:{'status': '000'}
+2018-05-14 17:27:41  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:27:41] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:27:42  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:27:42  config.py[line:24] INFO getResultPage:{'status': '101'}
+2018-05-14 17:27:42  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status like '1_1'  and  1=1  
+        
+2018-05-14 17:27:42  config.py[line:24] INFO *************************/getResultPage 请求处理完毕:操作成功*************************
+2018-05-14 17:27:42  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:27:42] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:27:42  config.py[line:24] INFO *************************收到访问请求: /resultList*************************
+2018-05-14 17:27:42  config.py[line:24] INFO resultList:{'status': '101', 'page': '1'}
+2018-05-14 17:27:42  config.py[line:24] INFO 数据库分页查询sql: 
+
+            SELECT * FROM items_test  where  status like '1_1'  and  1=1  ORDER BY good_id LIMIT 20 OFFSET 0 * 20
+        
+2018-05-14 17:27:43  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:27:43] "GET /resultList?status=101&page=1 HTTP/1.1" 200 -
+2018-05-14 17:27:43  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:27:43  config.py[line:24] INFO getResultPage:{'status': '000'}
+2018-05-14 17:27:43  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:27:43] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:27:44  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:27:44  config.py[line:24] INFO getResultPage:{'status': '001'}
+2018-05-14 17:27:44  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status like '__1'  and  1=1  
+        
+2018-05-14 17:27:44  config.py[line:24] INFO *************************/getResultPage 请求处理完毕:操作成功*************************
+2018-05-14 17:27:44  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:27:44] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:27:45  config.py[line:24] INFO *************************收到访问请求: /resultList*************************
+2018-05-14 17:27:45  config.py[line:24] INFO resultList:{'status': '001', 'page': '1'}
+2018-05-14 17:27:45  config.py[line:24] INFO 数据库分页查询sql: 
+
+            SELECT * FROM items_test  where  status like '__1'  and  1=1  ORDER BY good_id LIMIT 20 OFFSET 0 * 20
+        
+2018-05-14 17:27:45  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:27:45] "GET /resultList?status=001&page=1 HTTP/1.1" 200 -
+2018-05-14 17:27:45  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:27:45  config.py[line:24] INFO getResultPage:{'status': '000'}
+2018-05-14 17:27:45  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:27:45] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:32:26  config.py[line:24] INFO 数据库初始化完成
+2018-05-14 17:32:26  _internal.py[line:88] INFO  * Running on http://0.0.0.0:9090/ (Press CTRL+C to quit)
+2018-05-14 17:32:28  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status like '1__'  and  1=1  
+        
+2018-05-14 17:32:28  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status like '_1_'  and  1=1  
+        
+2018-05-14 17:32:28  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status like '__1'  and  1=1  
+        
+2018-05-14 17:32:28  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  
+        
+2018-05-14 17:32:28  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:32:28] "GET /result HTTP/1.1" 200 -
+2018-05-14 17:32:28  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:32:28  config.py[line:24] INFO getResultPage:{'status': '111'}
+2018-05-14 17:32:28  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status like '111'  and  1=1  
+        
+2018-05-14 17:32:28  config.py[line:24] INFO *************************/getResultPage 请求处理完毕:操作成功*************************
+2018-05-14 17:32:28  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:32:28] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:32:37  config.py[line:24] INFO *************************收到访问请求: /resultList*************************
+2018-05-14 17:32:37  config.py[line:24] INFO resultList:{'status': '111', 'page': '1'}
+2018-05-14 17:32:37  config.py[line:24] INFO 数据库分页查询sql: 
+
+            SELECT * FROM items_test  where  status like '111'  and  1=1  ORDER BY good_id LIMIT 20 OFFSET 0 * 20
+        
+2018-05-14 17:32:37  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:32:37] "GET /resultList?status=111&page=1 HTTP/1.1" 200 -
+2018-05-14 17:32:38  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:32:38  config.py[line:24] INFO getResultPage:{'status': '000'}
+2018-05-14 17:32:38  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:32:38] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:32:39  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:32:39  config.py[line:24] INFO getResultPage:{'status': '110'}
+2018-05-14 17:32:39  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status like '11_'  and  1=1  
+        
+2018-05-14 17:32:39  config.py[line:24] INFO *************************/getResultPage 请求处理完毕:操作成功*************************
+2018-05-14 17:32:39  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:32:39] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:32:39  config.py[line:24] INFO *************************收到访问请求: /resultList*************************
+2018-05-14 17:32:39  config.py[line:24] INFO resultList:{'status': '110', 'page': '1'}
+2018-05-14 17:32:39  config.py[line:24] INFO 数据库分页查询sql: 
+
+            SELECT * FROM items_test  where  status like '11_'  and  1=1  ORDER BY good_id LIMIT 20 OFFSET 0 * 20
+        
+2018-05-14 17:32:39  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:32:39] "GET /resultList?status=110&page=1 HTTP/1.1" 200 -
+2018-05-14 17:32:39  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:32:39  config.py[line:24] INFO getResultPage:{'status': '000'}
+2018-05-14 17:32:39  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:32:39] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:32:44  config.py[line:24] INFO *************************收到访问请求: /*************************
+2018-05-14 17:32:44  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  
+        
+2018-05-14 17:32:44  config.py[line:24] INFO 数据总量：20557
+2018-05-14 17:32:44  config.py[line:24] INFO *************************/ 请求处理完毕*************************
+2018-05-14 17:32:44  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:32:44] "GET / HTTP/1.1" 200 -
+2018-05-14 17:32:44  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:32:44  config.py[line:24] INFO getResultPage:{'status': '000'}
+2018-05-14 17:32:44  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:32:44] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:32:45  config.py[line:24] INFO *************************收到访问请求: /items/1*************************
+2018-05-14 17:32:45  config.py[line:24] INFO 数据库分页查询sql: 
+
+            SELECT * FROM items_test  ORDER BY good_id LIMIT 20 OFFSET 0 * 20
+        
+2018-05-14 17:32:45  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:32:45] "GET /items/1 HTTP/1.1" 200 -
+2018-05-14 17:32:46  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:32:46  config.py[line:24] INFO getResultPage:{'status': '000'}
+2018-05-14 17:32:46  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:32:46] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:32:49  config.py[line:24] INFO *************************接到请求: /uploadImg*************************
+2018-05-14 17:32:49  config.py[line:24] INFO upload_img:{'good_id': '0', 'good_name': '梦幻香皂125g', 'good_upc': '6901043810042', 'good_first': '美妆/洗护', 'good_second': '洗浴用品', 'good_third': '浴盐/香皂', 'good_desc': '梦幻', 'good_price': '0.0', 'good_p': '安徽省邮政公司', 'good_c': '池州市邮政公司', 'good_x': '石台县邮政公司', 'img_front': 'http://www.0372jsy.com/images/upload/Image/5901%283%29.jpg', 'img_side': 'http://www.5588.tv/Img/Img2011/2012-5-17/2013105145338200.jpg', 'img_obverse': 'http://www.5588.tv/Img/Img2011/2012-5-17/2013105145331227.jpg'}
+2018-05-14 17:32:49  config.py[line:24] INFO *************************结束请求*************************
+2018-05-14 17:32:49  config.py[line:24] INFO 
+
+2018-05-14 17:32:49  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:32:49] "POST /uploadImg HTTP/1.1" 200 -
+2018-05-14 17:32:49  config.py[line:24] INFO 在数据库中查到商品信息:good_name: 梦幻香皂125g, good_upc:6901043810042, status: 000
+2018-05-14 17:32:49  config.py[line:24] INFO 已有正面图片: 6901043810042_100.jpg
+2018-05-14 17:32:49  config.py[line:24] INFO 开始下载图片：upc:6901043810042, 图片类型：侧面， 链接：http://www.5588.tv/Img/Img2011/2012-5-17/2013105145338200.jpg
+2018-05-14 17:32:49  connectionpool.py[line:208] DEBUG Starting new HTTP connection (1): www.5588.tv
+2018-05-14 17:32:49  connectionpool.py[line:396] DEBUG http://www.5588.tv:80 "GET /Img/Img2011/2012-5-17/2013105145338200.jpg HTTP/1.1" 200 19211
+2018-05-14 17:32:49  config.py[line:24] INFO 图片下载成功：upc:6901043810042, 图片类型：侧面， 链接：http://www.5588.tv/Img/Img2011/2012-5-17/2013105145338200.jpg
+2018-05-14 17:32:49  config.py[line:24] INFO 开始下载图片：upc:6901043810042, 图片类型：反面， 链接：http://www.5588.tv/Img/Img2011/2012-5-17/2013105145331227.jpg
+2018-05-14 17:32:49  connectionpool.py[line:208] DEBUG Starting new HTTP connection (1): www.5588.tv
+2018-05-14 17:32:49  connectionpool.py[line:396] DEBUG http://www.5588.tv:80 "GET /Img/Img2011/2012-5-17/2013105145331227.jpg HTTP/1.1" 200 14790
+2018-05-14 17:32:49  config.py[line:24] INFO 图片下载成功：upc:6901043810042, 图片类型：反面， 链接：http://www.5588.tv/Img/Img2011/2012-5-17/2013105145331227.jpg
+2018-05-14 17:32:49  config.py[line:24] INFO 待保存的商品信息：<webService.src.db.dbhelper.GoodItem object at 0x03AA2790>
+2018-05-14 17:32:49  config.py[line:24] INFO 数据库更新商品sql: 
+
+            UPDATE items_test SET img_front = 'http://www.0372jsy.com/images/upload/Image/5901%283%29.jpg', img_side = 'http://www.5588.tv/Img/Img2011/2012-5-17/2013105145338200.jpg', img_obverse = 'http://www.5588.tv/Img/Img2011/2012-5-17/2013105145331227.jpg', status = '111', img_front_local = '6901043810042_100.jpg', 
+            img_side_local = '6901043810042_010.jpg', img_obverse_local = '6901043810042_001.jpg' where good_id = 0
+        
+2018-05-14 17:32:49  config.py[line:24] INFO 数据库更新商品成功：商品名：梦幻香皂125g, upc: 6901043810042, 状态：111
+2018-05-14 17:41:56  config.py[line:24] INFO 数据库初始化完成
+2018-05-14 17:41:56  _internal.py[line:88] INFO  * Running on http://0.0.0.0:9090/ (Press CTRL+C to quit)
+2018-05-14 17:42:05  config.py[line:24] INFO *************************收到访问请求: /*************************
+2018-05-14 17:42:05  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  
+        
+2018-05-14 17:42:05  config.py[line:24] INFO 数据总量：20557
+2018-05-14 17:42:05  config.py[line:24] INFO *************************/ 请求处理完毕*************************
+2018-05-14 17:42:05  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:42:05] "GET / HTTP/1.1" 200 -
+2018-05-14 17:42:05  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:42:05  config.py[line:24] INFO getResultPage:{'status': '000'}
+2018-05-14 17:42:05  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:42:05] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:42:06  config.py[line:24] INFO *************************收到访问请求: /items/1*************************
+2018-05-14 17:42:06  config.py[line:24] INFO 数据库分页查询sql: 
+
+            SELECT * FROM items_test  ORDER BY good_id LIMIT 20 OFFSET 0 * 20
+        
+2018-05-14 17:42:06  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:42:06] "GET /items/1 HTTP/1.1" 200 -
+2018-05-14 17:42:07  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:42:07  config.py[line:24] INFO getResultPage:{'status': '000'}
+2018-05-14 17:42:07  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:42:07] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:42:12  config.py[line:24] INFO *************************接到请求: /uploadImg*************************
+2018-05-14 17:42:12  config.py[line:24] INFO upload_img:{'good_id': '2', 'good_name': '祥和种子酒浓香型白酒40度460ml', 'good_upc': '6903800107181', 'good_first': '特色美食', 'good_second': '酒类', 'good_third': '白酒', 'good_desc': '祥和', 'good_price': '0.0', 'good_p': '安徽省邮政公司', 'good_c': '池州市邮政公司', 'good_x': '石台县邮政公司', 'img_front': 'http://go.dehua.net/images/201507/source_img/2010_G_1437453178218.jpg'}
+2018-05-14 17:42:12  config.py[line:24] INFO *************************结束请求*************************
+2018-05-14 17:42:12  config.py[line:24] INFO 
+
+2018-05-14 17:42:12  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:42:12] "POST /uploadImg HTTP/1.1" 200 -
+2018-05-14 17:42:12  config.py[line:24] INFO 在数据库中查到商品信息:good_name: 祥和种子酒浓香型白酒40度460ml, good_upc:6903800107181, status: 000
+2018-05-14 17:42:12  config.py[line:24] INFO 开始下载图片：upc:6903800107181, 图片类型：正面， 链接：http://go.dehua.net/images/201507/source_img/2010_G_1437453178218.jpg
+2018-05-14 17:42:12  connectionpool.py[line:208] DEBUG Starting new HTTP connection (1): go.dehua.net
+2018-05-14 17:42:12  connectionpool.py[line:396] DEBUG http://go.dehua.net:80 "GET /images/201507/source_img/2010_G_1437453178218.jpg HTTP/1.1" 200 164150
+2018-05-14 17:42:12  config.py[line:24] INFO 图片下载成功：upc:6903800107181, 图片类型：正面， 链接：http://go.dehua.net/images/201507/source_img/2010_G_1437453178218.jpg
+2018-05-14 17:42:12  config.py[line:24] INFO 待保存的商品信息：<webService.src.db.dbhelper.GoodItem object at 0x043462D0>
+2018-05-14 17:42:12  config.py[line:24] INFO 数据库更新商品sql: 
+
+            UPDATE items_test SET img_front = 'http://go.dehua.net/images/201507/source_img/2010_G_1437453178218.jpg', img_side = 'None', img_obverse = 'None', status = '100', img_front_local = '6903800107181_100.jpg', 
+            img_side_local = 'None', img_obverse_local = 'None' where good_id = 2
+        
+2018-05-14 17:42:12  config.py[line:24] INFO 数据库更新商品成功：商品名：祥和种子酒浓香型白酒40度460ml, upc: 6903800107181, 状态：100
+2018-05-14 17:42:28  config.py[line:24] INFO *************************收到访问请求: /*************************
+2018-05-14 17:42:28  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  
+        
+2018-05-14 17:42:28  config.py[line:24] INFO 数据总量：20557
+2018-05-14 17:42:28  config.py[line:24] INFO *************************/ 请求处理完毕*************************
+2018-05-14 17:42:28  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:42:28] "GET / HTTP/1.1" 200 -
+2018-05-14 17:42:28  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:42:28] "GET /htmls/common.css HTTP/1.1" 200 -
+2018-05-14 17:42:28  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:42:28] "GET /htmls/jquery-3.3.1.js HTTP/1.1" 200 -
+2018-05-14 17:42:28  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:42:28] "GET /htmls/common.js HTTP/1.1" 200 -
+2018-05-14 17:42:28  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:42:28  config.py[line:24] INFO getResultPage:{'status': '000'}
+2018-05-14 17:42:28  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:42:28] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:42:29  config.py[line:24] INFO *************************收到访问请求: /items/1*************************
+2018-05-14 17:42:29  config.py[line:24] INFO 数据库分页查询sql: 
+
+            SELECT * FROM items_test  ORDER BY good_id LIMIT 20 OFFSET 0 * 20
+        
+2018-05-14 17:42:29  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:42:29] "GET /items/1 HTTP/1.1" 200 -
+2018-05-14 17:42:29  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:42:29  config.py[line:24] INFO getResultPage:{'status': '000'}
+2018-05-14 17:42:29  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:42:29] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:42:34  config.py[line:24] INFO *************************接到请求: /uploadImg*************************
+2018-05-14 17:42:34  config.py[line:24] INFO upload_img:{'good_id': '2', 'good_name': '祥和种子酒浓香型白酒40度460ml', 'good_upc': '6903800107181', 'good_first': '特色美食', 'good_second': '酒类', 'good_third': '白酒', 'good_desc': '祥和', 'good_price': '0.0', 'good_p': '安徽省邮政公司', 'good_c': '池州市邮政公司', 'good_x': '石台县邮政公司', 'img_front': 'http://go.dehua.net/images/201507/source_img/2010_G_1437453178218.jpg', 'img_side': 'http://www.huijiuwang.com/images/upload/Image/xh001.jpg'}
+2018-05-14 17:42:34  config.py[line:24] INFO *************************结束请求*************************
+2018-05-14 17:42:34  config.py[line:24] INFO 
+
+2018-05-14 17:42:34  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:42:34] "POST /uploadImg HTTP/1.1" 200 -
+2018-05-14 17:42:34  config.py[line:24] INFO 在数据库中查到商品信息:good_name: 祥和种子酒浓香型白酒40度460ml, good_upc:6903800107181, status: 000
+2018-05-14 17:42:34  config.py[line:24] INFO 已有正面图片: 6903800107181_100.jpg
+2018-05-14 17:42:34  config.py[line:24] INFO 开始下载图片：upc:6903800107181, 图片类型：侧面， 链接：http://www.huijiuwang.com/images/upload/Image/xh001.jpg
+2018-05-14 17:42:34  connectionpool.py[line:208] DEBUG Starting new HTTP connection (1): www.huijiuwang.com
+2018-05-14 17:42:34  connectionpool.py[line:396] DEBUG http://www.huijiuwang.com:80 "GET /images/upload/Image/xh001.jpg HTTP/1.1" 200 None
+2018-05-14 17:42:34  config.py[line:24] INFO 图片下载成功：upc:6903800107181, 图片类型：侧面， 链接：http://www.huijiuwang.com/images/upload/Image/xh001.jpg
+2018-05-14 17:42:34  config.py[line:24] INFO 待保存的商品信息：<webService.src.db.dbhelper.GoodItem object at 0x04351630>
+2018-05-14 17:42:34  config.py[line:24] INFO 数据库更新商品sql: 
+
+            UPDATE items_test SET img_front = 'http://go.dehua.net/images/201507/source_img/2010_G_1437453178218.jpg', img_side = 'http://www.huijiuwang.com/images/upload/Image/xh001.jpg', img_obverse = 'None', status = '110', img_front_local = '6903800107181_100.jpg', 
+            img_side_local = '6903800107181_010.jpg', img_obverse_local = 'None' where good_id = 2
+        
+2018-05-14 17:42:34  config.py[line:24] INFO 数据库更新商品成功：商品名：祥和种子酒浓香型白酒40度460ml, upc: 6903800107181, 状态：110
+2018-05-14 17:42:44  config.py[line:24] INFO *************************收到访问请求: /*************************
+2018-05-14 17:42:44  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  
+        
+2018-05-14 17:42:44  config.py[line:24] INFO 数据总量：20557
+2018-05-14 17:42:44  config.py[line:24] INFO *************************/ 请求处理完毕*************************
+2018-05-14 17:42:44  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:42:44] "GET / HTTP/1.1" 200 -
+2018-05-14 17:42:44  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:42:44  config.py[line:24] INFO getResultPage:{'status': '000'}
+2018-05-14 17:42:44  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:42:44] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:42:46  config.py[line:24] INFO *************************收到访问请求: /items/1*************************
+2018-05-14 17:42:46  config.py[line:24] INFO 数据库分页查询sql: 
+
+            SELECT * FROM items_test  ORDER BY good_id LIMIT 20 OFFSET 0 * 20
+        
+2018-05-14 17:42:46  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:42:46] "GET /items/1 HTTP/1.1" 200 -
+2018-05-14 17:42:46  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:42:46  config.py[line:24] INFO getResultPage:{'status': '000'}
+2018-05-14 17:42:46  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:42:46] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:43:01  config.py[line:24] INFO *************************接到请求: /uploadImg*************************
+2018-05-14 17:43:01  config.py[line:24] INFO upload_img:{'good_id': '2', 'good_name': '祥和种子酒浓香型白酒40度460ml', 'good_upc': '6903800107181', 'good_first': '特色美食', 'good_second': '酒类', 'good_third': '白酒', 'good_desc': '祥和', 'good_price': '0.0', 'good_p': '安徽省邮政公司', 'good_c': '池州市邮政公司', 'good_x': '石台县邮政公司', 'img_front': 'http://go.dehua.net/images/201507/source_img/2010_G_1437453178218.jpg', 'img_side': 'http://www.huijiuwang.com/images/upload/Image/xh001.jpg', 'img_obverse': 'http://img14.360buyimg.com/n1/jfs/t2719/219/705200293/339812/670e51b2/5722c3ddNb7d900d0.jpg'}
+2018-05-14 17:43:01  config.py[line:24] INFO *************************结束请求*************************
+2018-05-14 17:43:01  config.py[line:24] INFO 
+
+2018-05-14 17:43:01  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:43:01] "POST /uploadImg HTTP/1.1" 200 -
+2018-05-14 17:43:01  config.py[line:24] INFO 在数据库中查到商品信息:good_name: 祥和种子酒浓香型白酒40度460ml, good_upc:6903800107181, status: 000
+2018-05-14 17:43:01  config.py[line:24] INFO 已有正面图片: 6903800107181_100.jpg
+2018-05-14 17:43:01  config.py[line:24] INFO 开始下载图片：upc:6903800107181, 图片类型：侧面， 链接：http://www.huijiuwang.com/images/upload/Image/xh001.jpg
+2018-05-14 17:43:01  connectionpool.py[line:208] DEBUG Starting new HTTP connection (1): www.huijiuwang.com
+2018-05-14 17:43:01  connectionpool.py[line:396] DEBUG http://www.huijiuwang.com:80 "GET /images/upload/Image/xh001.jpg HTTP/1.1" 200 None
+2018-05-14 17:43:02  config.py[line:24] INFO 图片下载成功：upc:6903800107181, 图片类型：侧面， 链接：http://www.huijiuwang.com/images/upload/Image/xh001.jpg
+2018-05-14 17:43:02  config.py[line:24] INFO 开始下载图片：upc:6903800107181, 图片类型：反面， 链接：http://img14.360buyimg.com/n1/jfs/t2719/219/705200293/339812/670e51b2/5722c3ddNb7d900d0.jpg
+2018-05-14 17:43:02  connectionpool.py[line:208] DEBUG Starting new HTTP connection (1): img14.360buyimg.com
+2018-05-14 17:43:02  connectionpool.py[line:396] DEBUG http://img14.360buyimg.com:80 "GET /n1/jfs/t2719/219/705200293/339812/670e51b2/5722c3ddNb7d900d0.jpg HTTP/1.1" 200 84738
+2018-05-14 17:43:02  config.py[line:24] INFO 图片下载成功：upc:6903800107181, 图片类型：反面， 链接：http://img14.360buyimg.com/n1/jfs/t2719/219/705200293/339812/670e51b2/5722c3ddNb7d900d0.jpg
+2018-05-14 17:43:02  config.py[line:24] INFO 待保存的商品信息：<webService.src.db.dbhelper.GoodItem object at 0x04346F70>
+2018-05-14 17:43:02  config.py[line:24] INFO 数据库更新商品sql: 
+
+            UPDATE items_test SET img_front = 'http://go.dehua.net/images/201507/source_img/2010_G_1437453178218.jpg', img_side = 'http://www.huijiuwang.com/images/upload/Image/xh001.jpg', img_obverse = 'http://img14.360buyimg.com/n1/jfs/t2719/219/705200293/339812/670e51b2/5722c3ddNb7d900d0.jpg', status = '111', img_front_local = '6903800107181_100.jpg', 
+            img_side_local = '6903800107181_010.jpg', img_obverse_local = '6903800107181_001.jpg' where good_id = 2
+        
+2018-05-14 17:43:02  config.py[line:24] INFO 数据库更新商品成功：商品名：祥和种子酒浓香型白酒40度460ml, upc: 6903800107181, 状态：111
+2018-05-14 17:43:09  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status like '1__'  and  1=1  
+        
+2018-05-14 17:43:09  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status like '_1_'  and  1=1  
+        
+2018-05-14 17:43:10  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status like '__1'  and  1=1  
+        
+2018-05-14 17:43:10  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  
+        
+2018-05-14 17:43:10  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:43:10] "GET /result HTTP/1.1" 200 -
+2018-05-14 17:43:10  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:43:10  config.py[line:24] INFO getResultPage:{'status': '111'}
+2018-05-14 17:43:10  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status like '111'  and  1=1  
+        
+2018-05-14 17:43:10  config.py[line:24] INFO *************************/getResultPage 请求处理完毕:操作成功*************************
+2018-05-14 17:43:10  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:43:10] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:43:11  config.py[line:24] INFO *************************收到访问请求: /resultList*************************
+2018-05-14 17:43:11  config.py[line:24] INFO resultList:{'status': '111', 'page': '1'}
+2018-05-14 17:43:11  config.py[line:24] INFO 数据库分页查询sql: 
+
+            SELECT * FROM items_test  where  status like '111'  and  1=1  ORDER BY good_id LIMIT 20 OFFSET 0 * 20
+        
+2018-05-14 17:43:11  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:43:11] "GET /resultList?status=111&page=1 HTTP/1.1" 200 -
+2018-05-14 17:43:11  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:43:11] "GET /imgs/6901043810042_100.jpg HTTP/1.1" 200 -
+2018-05-14 17:43:11  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:43:11] "GET /imgs/6902018770484_010.jpg HTTP/1.1" 200 -
+2018-05-14 17:43:11  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:43:11] "GET /imgs/6902018770484_100.jpg HTTP/1.1" 200 -
+2018-05-14 17:43:11  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:43:11] "GET /imgs/6901043810042_010.jpg HTTP/1.1" 200 -
+2018-05-14 17:43:11  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:43:11] "GET /imgs/6901043810042_001.jpg HTTP/1.1" 200 -
+2018-05-14 17:43:11  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:43:11] "GET /imgs/6902018770484_001.jpg HTTP/1.1" 200 -
+2018-05-14 17:43:11  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:43:11] "GET /imgs/6903800107181_010.jpg HTTP/1.1" 200 -
+2018-05-14 17:43:11  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:43:11  config.py[line:24] INFO getResultPage:{'status': '000'}
+2018-05-14 17:43:11  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:43:11] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:43:11  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:43:11] "GET /imgs/6903800107181_100.jpg HTTP/1.1" 200 -
+2018-05-14 17:43:11  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:43:11] "GET /imgs/6903800107181_001.jpg HTTP/1.1" 200 -
+2018-05-14 17:43:14  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:43:14  config.py[line:24] INFO getResultPage:{'status': '101'}
+2018-05-14 17:43:14  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status like '1_1'  and  1=1  
+        
+2018-05-14 17:43:14  config.py[line:24] INFO *************************/getResultPage 请求处理完毕:操作成功*************************
+2018-05-14 17:43:14  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:43:14] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:43:15  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:43:15  config.py[line:24] INFO getResultPage:{'status': '100'}
+2018-05-14 17:43:15  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status like '1__'  and  1=1  
+        
+2018-05-14 17:43:15  config.py[line:24] INFO *************************/getResultPage 请求处理完毕:操作成功*************************
+2018-05-14 17:43:15  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:43:15] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:43:15  config.py[line:24] INFO *************************收到访问请求: /resultList*************************
+2018-05-14 17:43:15  config.py[line:24] INFO resultList:{'status': '100', 'page': '1'}
+2018-05-14 17:43:15  config.py[line:24] INFO 数据库分页查询sql: 
+
+            SELECT * FROM items_test  where  status like '1__'  and  1=1  ORDER BY good_id LIMIT 20 OFFSET 0 * 20
+        
+2018-05-14 17:43:15  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:43:15] "GET /resultList?status=100&page=1 HTTP/1.1" 200 -
+2018-05-14 17:43:15  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:43:15  config.py[line:24] INFO getResultPage:{'status': '000'}
+2018-05-14 17:43:15  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:43:15] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:58:58  config.py[line:24] INFO 数据库初始化完成
+2018-05-14 17:58:58  _internal.py[line:88] INFO  * Running on http://0.0.0.0:9090/ (Press CTRL+C to quit)
+2018-05-14 17:59:05  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status like '1__'  and  1=1  
+        
+2018-05-14 17:59:05  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status like '_1_'  and  1=1  
+        
+2018-05-14 17:59:05  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status like '__1'  and  1=1  
+        
+2018-05-14 17:59:05  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  
+        
+2018-05-14 17:59:05  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:59:05] "GET /result HTTP/1.1" 200 -
+2018-05-14 17:59:05  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:59:05] "GET /htmls/jquery-3.3.1.js HTTP/1.1" 200 -
+2018-05-14 17:59:05  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:59:05] "GET /htmls/common.css HTTP/1.1" 200 -
+2018-05-14 17:59:05  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:59:05] "GET /htmls/common.js HTTP/1.1" 200 -
+2018-05-14 17:59:05  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:59:05  config.py[line:24] INFO getResultPage:{'status': '111'}
+2018-05-14 17:59:05  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status like '111'  and  1=1  
+        
+2018-05-14 17:59:05  config.py[line:24] INFO *************************/getResultPage 请求处理完毕:操作成功*************************
+2018-05-14 17:59:05  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:59:05] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:59:06  config.py[line:24] INFO *************************收到访问请求: /resultList*************************
+2018-05-14 17:59:06  config.py[line:24] INFO resultList:{'status': '111', 'page': '1'}
+2018-05-14 17:59:06  config.py[line:24] INFO 数据库分页查询sql: 
+
+            SELECT * FROM items_test  where  status like '111'  and  1=1  ORDER BY good_id LIMIT 20 OFFSET 0 * 20
+        
+2018-05-14 17:59:06  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:59:06] "GET /resultList?status=111&page=1 HTTP/1.1" 200 -
+2018-05-14 17:59:06  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:59:06] "GET /imgs/6902018770484_001.jpg HTTP/1.1" 200 -
+2018-05-14 17:59:06  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:59:06] "GET /imgs/6901043810042_100.jpg HTTP/1.1" 200 -
+2018-05-14 17:59:06  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:59:06] "GET /imgs/6902018770484_100.jpg HTTP/1.1" 200 -
+2018-05-14 17:59:06  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:59:06] "GET /imgs/6901043810042_010.jpg HTTP/1.1" 200 -
+2018-05-14 17:59:06  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:59:06] "GET /imgs/6901043810042_001.jpg HTTP/1.1" 200 -
+2018-05-14 17:59:06  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:59:06] "GET /imgs/6902018770484_010.jpg HTTP/1.1" 200 -
+2018-05-14 17:59:06  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 17:59:06  config.py[line:24] INFO getResultPage:{'status': '000'}
+2018-05-14 17:59:06  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:59:06] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 17:59:06  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:59:06] "GET /imgs/6903800107181_010.jpg HTTP/1.1" 200 -
+2018-05-14 17:59:06  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:59:06] "GET /imgs/6903800107181_100.jpg HTTP/1.1" 200 -
+2018-05-14 17:59:06  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 17:59:06] "GET /imgs/6903800107181_001.jpg HTTP/1.1" 200 -
+2018-05-14 18:00:11  config.py[line:24] INFO 数据库初始化完成
+2018-05-14 18:00:11  _internal.py[line:88] INFO  * Running on http://0.0.0.0:9090/ (Press CTRL+C to quit)
+2018-05-14 18:00:17  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status like '1__'  and  1=1  
+        
+2018-05-14 18:00:17  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status like '_1_'  and  1=1  
+        
+2018-05-14 18:00:17  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status like '__1'  and  1=1  
+        
+2018-05-14 18:00:17  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  
+        
+2018-05-14 18:00:17  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 18:00:17] "GET /result HTTP/1.1" 200 -
+2018-05-14 18:00:17  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 18:00:17] "GET /htmls/common.css HTTP/1.1" 200 -
+2018-05-14 18:00:17  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 18:00:17] "GET /htmls/common.js HTTP/1.1" 200 -
+2018-05-14 18:00:17  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 18:00:17] "GET /htmls/jquery-3.3.1.js HTTP/1.1" 200 -
+2018-05-14 18:00:17  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 18:00:17  config.py[line:24] INFO getResultPage:{'status': '111'}
+2018-05-14 18:00:17  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status like '111'  and  1=1  
+        
+2018-05-14 18:00:17  config.py[line:24] INFO *************************/getResultPage 请求处理完毕:操作成功*************************
+2018-05-14 18:00:17  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 18:00:17] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 18:00:18  config.py[line:24] INFO *************************收到访问请求: /resultList*************************
+2018-05-14 18:00:18  config.py[line:24] INFO resultList:{'status': '111', 'page': '1'}
+2018-05-14 18:00:18  config.py[line:24] INFO 数据库分页查询sql: 
+
+            SELECT * FROM items_test  where  status like '111'  and  1=1  ORDER BY good_id LIMIT 20 OFFSET 0 * 20
+        
+2018-05-14 18:00:18  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 18:00:18] "GET /resultList?status=111&page=1 HTTP/1.1" 200 -
+2018-05-14 18:00:18  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 18:00:18] "GET /imgs/6901043810042_100.jpg HTTP/1.1" 200 -
+2018-05-14 18:00:18  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 18:00:18] "GET /imgs/6902018770484_100.jpg HTTP/1.1" 200 -
+2018-05-14 18:00:18  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 18:00:18] "GET /imgs/6901043810042_001.jpg HTTP/1.1" 200 -
+2018-05-14 18:00:18  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 18:00:18] "GET /imgs/6901043810042_010.jpg HTTP/1.1" 200 -
+2018-05-14 18:00:18  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 18:00:18] "GET /imgs/6902018770484_010.jpg HTTP/1.1" 200 -
+2018-05-14 18:00:18  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 18:00:18] "GET /imgs/6902018770484_001.jpg HTTP/1.1" 200 -
+2018-05-14 18:00:18  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 18:00:18] "GET /imgs/6903800107181_100.jpg HTTP/1.1" 200 -
+2018-05-14 18:00:18  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 18:00:18] "GET /imgs/6903800107181_010.jpg HTTP/1.1" 200 -
+2018-05-14 18:00:18  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 18:00:18] "GET /imgs/6903800107181_001.jpg HTTP/1.1" 200 -
+2018-05-14 18:00:18  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 18:00:18  config.py[line:24] INFO getResultPage:{'status': '000'}
+2018-05-14 18:00:18  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 18:00:18] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 18:01:11  config.py[line:24] INFO 数据库初始化完成
+2018-05-14 18:01:11  _internal.py[line:88] INFO  * Running on http://0.0.0.0:9090/ (Press CTRL+C to quit)
+2018-05-14 18:01:16  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status like '1__'  and  1=1  
+        
+2018-05-14 18:01:16  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status like '_1_'  and  1=1  
+        
+2018-05-14 18:01:16  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status like '__1'  and  1=1  
+        
+2018-05-14 18:01:16  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  
+        
+2018-05-14 18:01:17  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 18:01:17] "GET /result HTTP/1.1" 200 -
+2018-05-14 18:01:17  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 18:01:17] "GET /htmls/common.css HTTP/1.1" 200 -
+2018-05-14 18:01:17  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 18:01:17] "GET /htmls/jquery-3.3.1.js HTTP/1.1" 200 -
+2018-05-14 18:01:17  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 18:01:17] "GET /htmls/common.js HTTP/1.1" 200 -
+2018-05-14 18:01:17  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 18:01:17  config.py[line:24] INFO getResultPage:{'status': '111'}
+2018-05-14 18:01:17  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status like '111'  and  1=1  
+        
+2018-05-14 18:01:17  config.py[line:24] INFO *************************/getResultPage 请求处理完毕:操作成功*************************
+2018-05-14 18:01:17  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 18:01:17] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 18:01:18  config.py[line:24] INFO *************************收到访问请求: /resultList*************************
+2018-05-14 18:01:18  config.py[line:24] INFO resultList:{'status': '111', 'page': '1'}
+2018-05-14 18:01:18  config.py[line:24] INFO 数据库分页查询sql: 
+
+            SELECT * FROM items_test  where  status like '111'  and  1=1  ORDER BY good_id LIMIT 20 OFFSET 0 * 20
+        
+2018-05-14 18:01:18  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 18:01:18] "GET /resultList?status=111&page=1 HTTP/1.1" 200 -
+2018-05-14 18:01:18  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 18:01:18] "GET /imgs/6901043810042_100.jpg HTTP/1.1" 200 -
+2018-05-14 18:01:18  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 18:01:18] "GET /imgs/6902018770484_100.jpg HTTP/1.1" 200 -
+2018-05-14 18:01:18  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 18:01:18] "GET /imgs/6901043810042_010.jpg HTTP/1.1" 200 -
+2018-05-14 18:01:18  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 18:01:18] "GET /imgs/6901043810042_001.jpg HTTP/1.1" 200 -
+2018-05-14 18:01:18  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 18:01:18] "GET /imgs/6902018770484_001.jpg HTTP/1.1" 200 -
+2018-05-14 18:01:18  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 18:01:18] "GET /imgs/6902018770484_010.jpg HTTP/1.1" 200 -
+2018-05-14 18:01:18  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 18:01:18] "GET /imgs/6903800107181_100.jpg HTTP/1.1" 200 -
+2018-05-14 18:01:18  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 18:01:18] "GET /imgs/6903800107181_010.jpg HTTP/1.1" 200 -
+2018-05-14 18:01:18  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 18:01:18] "GET /imgs/6903800107181_001.jpg HTTP/1.1" 200 -
+2018-05-14 18:01:18  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 18:01:18  config.py[line:24] INFO getResultPage:{'status': '000'}
+2018-05-14 18:01:18  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 18:01:18] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 18:02:23  config.py[line:24] INFO 数据库初始化完成
+2018-05-14 18:02:23  _internal.py[line:88] INFO  * Running on http://0.0.0.0:9090/ (Press CTRL+C to quit)
+2018-05-14 18:02:28  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status like '1__'  and  1=1  
+        
+2018-05-14 18:02:28  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status like '_1_'  and  1=1  
+        
+2018-05-14 18:02:28  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status like '__1'  and  1=1  
+        
+2018-05-14 18:02:28  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  
+        
+2018-05-14 18:02:28  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 18:02:28] "GET /result HTTP/1.1" 200 -
+2018-05-14 18:02:28  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 18:02:28] "GET /htmls/jquery-3.3.1.js HTTP/1.1" 200 -
+2018-05-14 18:02:28  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 18:02:28] "GET /htmls/common.css HTTP/1.1" 200 -
+2018-05-14 18:02:28  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 18:02:28] "GET /htmls/common.js HTTP/1.1" 200 -
+2018-05-14 18:02:28  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 18:02:28  config.py[line:24] INFO getResultPage:{'status': '111'}
+2018-05-14 18:02:28  config.py[line:24] INFO 数据库查询总量sql: 
+
+            SELECT count(*) FROM items_test  where  status like '111'  and  1=1  
+        
+2018-05-14 18:02:28  config.py[line:24] INFO *************************/getResultPage 请求处理完毕:操作成功*************************
+2018-05-14 18:02:28  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 18:02:28] "POST /getResultPage HTTP/1.1" 200 -
+2018-05-14 18:02:29  config.py[line:24] INFO *************************收到访问请求: /resultList*************************
+2018-05-14 18:02:29  config.py[line:24] INFO resultList:{'status': '111', 'page': '1'}
+2018-05-14 18:02:29  config.py[line:24] INFO 数据库分页查询sql: 
+
+            SELECT * FROM items_test  where  status like '111'  and  1=1  ORDER BY good_id LIMIT 20 OFFSET 0 * 20
+        
+2018-05-14 18:02:29  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 18:02:29] "GET /resultList?status=111&page=1 HTTP/1.1" 200 -
+2018-05-14 18:02:29  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 18:02:29] "GET /imgs/6901043810042_010.jpg HTTP/1.1" 200 -
+2018-05-14 18:02:29  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 18:02:29] "GET /imgs/6901043810042_100.jpg HTTP/1.1" 200 -
+2018-05-14 18:02:29  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 18:02:29] "GET /imgs/6901043810042_001.jpg HTTP/1.1" 200 -
+2018-05-14 18:02:29  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 18:02:29] "GET /imgs/6902018770484_100.jpg HTTP/1.1" 200 -
+2018-05-14 18:02:29  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 18:02:29] "GET /imgs/6902018770484_001.jpg HTTP/1.1" 200 -
+2018-05-14 18:02:29  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 18:02:29] "GET /imgs/6902018770484_010.jpg HTTP/1.1" 200 -
+2018-05-14 18:02:29  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 18:02:29] "GET /imgs/6903800107181_100.jpg HTTP/1.1" 200 -
+2018-05-14 18:02:29  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 18:02:29] "GET /imgs/6903800107181_010.jpg HTTP/1.1" 200 -
+2018-05-14 18:02:29  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 18:02:29] "GET /imgs/6903800107181_001.jpg HTTP/1.1" 200 -
+2018-05-14 18:02:29  config.py[line:24] INFO *************************接到请求: /getResultPage*************************
+2018-05-14 18:02:29  config.py[line:24] INFO getResultPage:{'status': '000'}
+2018-05-14 18:02:29  _internal.py[line:88] INFO 127.0.0.1 - - [14/May/2018 18:02:29] "POST /getResultPage HTTP/1.1" 200 -

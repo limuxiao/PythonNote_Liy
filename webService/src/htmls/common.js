@@ -1,13 +1,14 @@
-const PATH_UPLOAD = 'http://127.0.0.1:9090/uploadImg'
+const PATH_HOST = 'http://192.168.113.128:9090' 
 
 $(document).ready(function(){
-       
+
+
     // 正面checkbox
     $(".img_state_front").change(function(){
         update_kind($(this), '.img_state_front')
     });
 
-    // 侧面checkbox    
+    // 侧面checkbox
     $(".img_state_side").change(function(){
         update_kind($(this), '.img_state_side')
     });
@@ -21,11 +22,45 @@ $(document).ready(function(){
     $('.btn_submit').click(function(){
         upload_good_info($(this))
     });
-    
+
+    // 跳转到结果页面
+    $('#btn_result').click(function(){
+        window.open('result')
+        // to_result_page()
+    });
+
+    // 选中正面checkbox
+    $('#cb_result_front').change(function(){
+        get_result_page()
+    });
+
+    // 选中侧面checkbox
+    $('#cb_result_side').change(function(){
+        get_result_page()
+    });
+
+    // 选中反面checkbox
+    $('#cb_result_obverse').change(function(){
+        get_result_page()
+    });
+
+    // 结果页
+    $('#result_body').ready(function(){
+        get_result_page()
+    });
+
+    //
+    $('.a_thum').hover(function(){
+        $('#div_result_big_show').show()
+        $('#img_result_big_show').prop('src', $(this).find('img').prop('src'))
+    }, function(){
+        $('#div_result_big_show').hide()
+    });
+
     /**
      * 更新图片选中的类型
-     * @param {*} img_obj 
-     * @param {*} img_state 
+     * @param {*} img_obj
+     * @param {*} img_state
      */
     function update_kind(img_obj, img_state){
 
@@ -38,8 +73,8 @@ $(document).ready(function(){
 
     /**
      * 更新该商品其他图片相同类型的CheckBox的状态
-     * @param {*} img_obj 
-     * @param {*} img_state 
+     * @param {*} img_obj
+     * @param {*} img_state
      */
     function update_same_kind(img_obj, img_state){
 
@@ -48,14 +83,14 @@ $(document).ready(function(){
         var check_list = td.find(img_state)
 
         if(img_obj.prop('checked')){                    // 如果选中, 1.遍历其他的checkbox 将他们的置为未选中;2.更新商品的图片信息
-            
+
             check_list.each(function(){
                 if($(this).prop('checked'))
                     $(this).prop('checked', false)
             })
 
             img_obj.prop('checked', true)
-            
+
         }else{                                          // 如果没有选中,
 
         }
@@ -64,30 +99,30 @@ $(document).ready(function(){
 
     /**
      * 更新该商品同一图片不同类型的CheckBox的状态
-     * @param {*} img_obj 
-     * @param {*} img_state 
+     * @param {*} img_obj
+     * @param {*} img_state
      */
     function update_other_kind(img_obj, img_state){
         var ck_list = img_obj.parent().find('input[type="checkbox"]')
 
         if(img_obj.prop('checked')){                    // 如果选中, 1.遍历其他的checkbox 将他们的置为未选中;2.更新商品的图片信息
-            
+
             ck_list.each(function(){
                 if($(this).prop('checked'))
                         $(this).prop('checked', false)
             })
             img_obj.prop('checked', true)
-            
+
         }else{                                          // 如果没有选中,
 
         }
 
-        
+
     }
 
     /**
      * 上传 商品信息
-     * @param {} btn_sub 
+     * @param {} btn_sub
      */
     function upload_good_info(btn_sub){
 
@@ -133,24 +168,90 @@ $(document).ready(function(){
         })
 
         if(good_info['img_front'] || good_info['img_side'] || good_info['img_obverse']){
-            
+
             // 禁用按钮
             btn_sub.text('正在提交...')
-            btn_sub.prop('disabled', 'disabled') 
+            btn_sub.prop('disabled', 'disabled')
 
             // 提交数据
-            $.post(PATH_UPLOAD, good_info, function(result){
-                data =JSON.parse(result)
+            $.post(PATH_HOST + '/uploadImg', good_info, function(data){
                 if('0000' == data.returnCode){
-                    btn_sub.text('提交完成')
+                    if('111' == data.status){
+                        btn_sub.text('提交完成')
+                    }else{
+                        btn_sub.text('提交成功，继续提交')
+                        btn_sub.prop('disabled', '')
+                    }
+
+                    if(good_info['img_front']){
+                        img_front_list.each(function(){
+                            $(this).prop('disabled', 'disabled')
+                        })
+                    }
+
+                    if(good_info['img_side']){
+                        img_side_list.each(function(){
+                            $(this).prop('disabled', 'disabled')
+                        })
+                    }
+
+                    if(good_info['img_obverse']){
+                        img_obverse_list.each(function(){
+                            $(this).prop('disabled', 'disabled')
+                        })
+                    }
+
                 }else{
                     btn_sub.text('提交失败,重新提交')
-                    btn_sub.prop('disabled', '') 
+                    btn_sub.prop('disabled', '')
                 }
-                
+
             })
 
         }
+    }
+
+    /**
+     * 根据筛选条件获取结果页数
+     */
+    function get_result_page(){
+
+        // 先清空之前添加的元素
+        $('#div_content_menu').html('')
+
+        var status_front = '0', status_side = '0', status_obverse = '0'
+        if($('#cb_result_front').prop('checked')){
+            status_front = '1'
+        }
+        if($('#cb_result_side').prop('checked')){
+            status_side = '1'
+        }
+        if($('#cb_result_obverse').prop('checked')){
+            status_obverse = '1'
+        }
+        var status = status_front + status_side + status_obverse
+        // 发送请求
+        $.post(PATH_HOST + '/getResultPage', {status: status}, function(data){
+            if('0000' == data.returnCode){
+                var pages = data.pages
+                if(pages > 0){
+
+                    for(var i = 0; i< pages; i++){
+                        var a = $('<a href="javascript:(0)" onclick="load_result(\'resultList?status='+ status +'&page='+ (i + 1) +'\', \'\')"></a><br/>').text('第'+ (i + 1) +'页')
+
+                        $('#div_content_menu').append(a)
+                    }
+
+                }else{
+                    var p = $('<p></p>').text('暂无结果')
+                    $('#div_content_menu').append(p)
+
+
+                }
+            }else{
+                // alert(data.returnMessage)
+            }
+        })
     }
 
 });
@@ -159,8 +260,14 @@ $(document).ready(function(){
  * 加载资源
  * @param {*} path  资源路径
  * @param {*} title 资源标题
- */ 
+ */
 function load_source(path, title){
     document.getElementById('source').setAttribute('src', path)
     document.getElementById('title').innerText = title
 }
+
+function load_result(path, title){
+    document.getElementById('result_source').setAttribute('src', path)
+}
+
+

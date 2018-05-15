@@ -96,7 +96,7 @@ class Download(object):
         f = open(filename + '.jpg', 'wb')
         f.write(res.content)
         f.close()
-        return img_name
+        return img_name + '.jpg'
 
     pass
 

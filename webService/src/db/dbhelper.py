@@ -128,24 +128,38 @@ class DBHelper(object):
         return None
 
     @classmethod
-    def select_items(cls, page=1, page_size=20) -> list:
+    def select_items(cls, page=1, page_size=20, options=()) -> list:
         """
             分页查询
-        :param page:
-        :param page_size:
+        :param options: 查询条件
+        :param page:    页数
+        :param page_size: 每页步长
         :return:
 
         """
+        op = cls.__join_options(options)
+
         select_sql = '''
-            SELECT * FROM %s ORDER BY good_id LIMIT %d OFFSET %d * %d
-        ''' % (TABLE_NAME, page_size, page - 1, page_size)
+            SELECT * FROM %s %s ORDER BY good_id LIMIT %d OFFSET %d * %d
+        ''' % (TABLE_NAME, op, page_size, page - 1, page_size)
+
+        Log.info('数据库分页查询sql: \n%s' % select_sql)
+
         return [GoodItem(info_tuple=item) for item in cls.cursor.execute(select_sql)]
 
     @classmethod
-    def select_count(cls):
+    def select_count(cls, options=()):
+        """
+            总量查询
+        :param options:  查询条件
+        :return:
+        """
+        op = cls.__join_options(options)
+
         select_sql = '''
-            SELECT count(*) FROM items
-        '''
+            SELECT count(*) FROM %s %s 
+        ''' % (TABLE_NAME, op)
+        Log.info('数据库查询总量sql: \n%s' % select_sql)
         res = cls.cursor.execute(select_sql)
         for r in res:
             return r[0]
@@ -204,6 +218,21 @@ class DBHelper(object):
     @classmethod
     def execute_sql(cls, sql):
         pass
+
+    @classmethod
+    def __join_options(cls, options) -> str:
+        """
+            拼接查询条件
+        :param options:
+        :return:
+        """
+        op = ''
+        if options:
+            op += ' where'
+            for p in options:
+                op += ''' %s and ''' % p
+            op += ' 1=1 '
+        return op
 
 
 def main():
